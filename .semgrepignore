@@ -1,0 +1,8 @@
+# Ignorer les dossiers de build et dépendances
+node_modules/
+.next/
+frontend/.next/
+frontend/node_modules/
+*.zip
+*.pdf
+.DS_Store

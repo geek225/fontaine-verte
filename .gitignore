@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Next.js build outputs
+.next/
+*/.next/
+out/
+*/out/
+build/
+*/build/
+
+# Environment files & secrets (keep .env.example)
+.env
+.env.*
+!.env.example
+*/.env
+*/.env.*
+!*/.env.example
+!frontend/.env.example
+
+# OS files
+.DS_Store
+**/.DS_Store
+*.pem
+Thumbs.db
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Vercel cache
+.vercel
+*/.vercel
+
+# TypeScript
+*.tsbuildinfo
+
+# Security reports local runs
+security-reports/

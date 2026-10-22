@@ -1,0 +1,591 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>Fontaine Verte - Gestion et traitement des déchets</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed-dim": "#4ae176", "secondary-fixed-dim": "#94ccff", "on-tertiary-container": "#d5ffd5", "on-primary-fixed": "#00210a", "inverse-on-surface": "#eef0ff", "on-surface": "#131b2e", "surface-bright": "#faf8ff", "on-primary-container": "#d3ffd5", "on-tertiary": "#ffffff", "error": "#ba1a1a", "on-surface-variant": "#3f493f", "on-tertiary-fixed-variant": "#005321", "tertiary-container": "#008138", "error-container": "#ffdad6", "on-background": "#131b2e", "on-tertiary-fixed": "#002109", "surface-variant": "#dae2fd", "on-primary": "#ffffff", "on-error-container": "#93000a", "inverse-surface": "#283044", "secondary-container": "#7bc2ff", "surface-container": "#eaedff", "secondary": "#006399", "primary-container": "#15803d", "surface": "#faf8ff", "on-secondary-container": "#004f7b", "secondary-fixed": "#cde5ff", "inverse-primary": "#79db8d", "surface-container-highest": "#dae2fd", "surface-container-high": "#e2e7ff", "primary-fixed-dim": "#79db8d", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#001d32", "on-secondary": "#ffffff", "surface-tint": "#006d30", "on-primary-fixed-variant": "#005323", "surface-container-low": "#f2f3ff", "tertiary-fixed": "#6bff8f", "background": "#faf8ff", "outline": "#6f7a6e", "primary": "#00652c", "surface-dim": "#d2d9f4", "tertiary": "#00652b", "on-secondary-fixed-variant": "#004b74", "outline-variant": "#becabc", "primary-fixed": "#95f8a7", "on-error": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-mobile": "1rem", "space-lg": "1.5rem", "margin-mobile": "1.25rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "space-md": "1rem", "margin": "2rem", "gutter": "1.5rem" }, "fontFamily": { "body-sm": ["Manrope"], "body-md": ["Manrope"], "headline-xl": ["Manrope"], "label-md": ["Manrope"], "headline-md": ["Manrope"], "display-hero-mobile": ["Manrope"], "label-lg": ["Manrope"], "headline-xl-mobile": ["Manrope"], "headline-lg": ["Manrope"], "display-hero": ["Manrope"], "label-caps": ["Manrope"], "headline-sm": ["Manrope"], "body-lg": ["Manrope"] }, "fontSize": { "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "800" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-margin flex items-center justify-between gap-space-md"><a class="flex items-center gap-space-sm group text-left" data-path="accueil" href="#"><div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center transition-transform group-hover:scale-105"><span class="material-symbols-outlined text-2xl">eco</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight leading-tight group-hover:text-primary transition-colors">Fontaine Verte</span><span class="font-label-caps text-label-caps text-primary font-bold tracking-wider uppercase">Notre souci, un monde sain !</span></div></a><nav class="hidden xl:flex items-center gap-space-xs p-1 rounded-full bg-surface-container-low/60 mx-auto" data-active-classes="bg-surface-container-high text-primary font-bold rounded-full"><a class="px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="accueil" href="#">Accueil</a><a class="px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="a-propos" href="#">À propos</a><a aria-current="page" class="px-4 py-2 transition-colors bg-surface-container-high text-primary font-bold rounded-full" data-path="nos-services" href="#">Nos services</a><a class="px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="equipements" href="#">Équipements</a><a class="px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-md"><a class="inline-flex items-center justify-center gap-space-xs px-6 py-2.5 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg transition-all duration-200 hover:bg-primary shadow-[0_4px_16px_-2px_rgba(21,128,61,0.25)] hover:shadow-[0_8px_20px_-2px_rgba(21,128,61,0.35)] active:scale-95" data-path="demander-un-devis" href="#"><span class="">Demander un devis</span><span class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-0.5">arrow_forward</span></a><div class="hidden sm:flex items-center pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-fixed" src="https://lh3.googleusercontent.com/aida/AEtjO1VehV3jSECZEVpcCNdUIxJcXg09nSsgrIxDe7tUPnKoM7c0JiBLZxJpF5et-XMGZ4a0JHphEF_YzUwu9KioLO-RHq7NGDMJuUx4tEZlmtVkeijBkE2yZHMhLDEvaNI_L911LLfUugEuDIe6N5tazZiokKTIAdm7sWRfpfcU_bbBgdF7ZyY-8unnugzSoUPvNL1zussV5VgENY50jnsM7zjLAZRS7_W8H_d8usFpTTIc6OX6Gzd8jhEDUkT79jvyPM8pwA_Wi16vXw"></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Top Banner / Dynamic Header -->
+<section class="relative w-full overflow-hidden bg-surface-container-low py-16 lg:py-24">
+<div class="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-primary-fixed/30 blur-3xl pointer-events-none"></div>
+<div class="absolute left-1/4 -bottom-20 w-80 h-80 rounded-full bg-secondary-fixed/25 blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-margin relative z-10">
+<div class="flex flex-col max-w-3xl">
+<div class="inline-flex items-center gap-space-xs px-3.5 py-1.5 rounded-full bg-surface-container-lowest shadow-sm mb-space-md w-fit">
+<span class="material-symbols-outlined text-primary text-base">verified</span>
+<span class="font-label-caps text-label-caps text-primary tracking-wider uppercase font-bold">Solutions &amp; Expertises Certifiées</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-on-surface font-extrabold tracking-tight mb-space-md">
+          Nos métiers au service d’un monde plus propre
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-space-lg">
+          Des prestations rigoureusement conformes et sur mesure pour le secteur industriel, les infrastructures de santé et les collectivités en Côte d'Ivoire. Nous transformons vos défis environnementaux en leviers de durabilité.
+        </p>
+<!-- KPI strip inside header -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-md pt-space-md">
+<div class="flex flex-col bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<span class="font-headline-xl text-headline-xl text-primary font-extrabold tracking-tight">100%</span>
+<span class="font-label-md text-label-md text-on-surface-variant mt-0.5">Traçabilité légale certifiée</span>
+</div>
+<div class="flex flex-col bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<span class="font-headline-xl text-headline-xl text-primary font-extrabold tracking-tight">24/48h</span>
+<span class="font-label-md text-label-md text-on-surface-variant mt-0.5">Délai d'intervention rapide</span>
+</div>
+<div class="flex flex-col bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<span class="font-headline-xl text-headline-xl text-secondary font-extrabold tracking-tight">+1200°C</span>
+<span class="font-label-md text-label-md text-on-surface-variant mt-0.5">Pyrolyse et neutralisation</span>
+</div>
+<div class="flex flex-col bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<span class="font-headline-xl text-headline-xl text-primary font-extrabold tracking-tight">0 Rejet</span>
+<span class="font-label-md text-label-md text-on-surface-variant mt-0.5">Filtres et laveur de fumées</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Quick Filters -->
+<section class="w-full bg-surface py-6 sticky top-20 z-30 shadow-sm backdrop-blur-md bg-surface/90">
+<div class="max-w-7xl mx-auto px-margin flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 sm:pb-0 no-scrollbar" id="filter-buttons">
+<button class="filter-btn px-5 py-2 rounded-full font-label-lg text-label-lg bg-primary-container text-on-primary transition-all shadow-sm" data-filter="all" onclick="filterServices('all')">
+          Toutes nos solutions
+        </button>
+<button class="filter-btn px-5 py-2 rounded-full font-label-lg text-label-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-all" data-filter="industrie" onclick="filterServices('industrie')">
+          Industrie &amp; BTP
+        </button>
+<button class="filter-btn px-5 py-2 rounded-full font-label-lg text-label-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-all" data-filter="sante" onclick="filterServices('sante')">
+          Santé &amp; Médical (DASRI)
+        </button>
+<button class="filter-btn px-5 py-2 rounded-full font-label-lg text-label-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-all" data-filter="formation" onclick="filterServices('formation')">
+          Formation &amp; Audit HSE
+        </button>
+</div>
+<div class="hidden md:flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-primary text-base">verified_user</span>
+<span class="">Conforme aux normes CIAPOL &amp; Ministère de l'Environnement</span>
+</div>
+</div>
+</section>
+<!-- Services Grid (6 Core Domains) -->
+<section class="w-full py-16 lg:py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Service 1: Collecte Maîtrisée -->
+<article class="service-card flex flex-col justify-between bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group" data-category="industrie">
+<div>
+<div class="relative h-56 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A modern green industrial waste collection truck operating in an eco-friendly modern industrial zone in Abidjan Ivory Coast, clean green logistics vehicle with Fontaine Verte branding under bright daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAIlBq5TA2Hifn15zTwKTICkgMN4Y-7qSAaHeqcjhj3p86CtfEwM0-qsnnqaje-QYiFLX9gXR2tzYjuA6SpUK10emhvzwXq74u-4IBu1kJRpXgxgRBkIZCEbKHR2OzhuT0-bUS4rydnIcGImW4Jjc24ymG7n_e6tdUGGRZmdKzn6TeBYaDdOO6gK2iyj_dTtViIHC1Ol3vn-eR5sp-EIZx-mw6IdRqbSeU3LDOLnxsRy8Fo3u2GASu">
+<div class="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-caps text-label-caps uppercase tracking-wider font-bold">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                Industrie &amp; Tertiaire
+              </div>
+</div>
+<div class="p-space-lg flex flex-col">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low text-primary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-2xl">local_shipping</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight mb-space-xs group-hover:text-primary transition-colors">
+                Collecte maîtrisée des déchets
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+                Organisation rigoureuse et sécurisée pour l’évacuation périodique ou ponctuelle de vos déchets industriels banals (DIB) et spécifiques.
+              </p>
+<ul class="flex flex-col gap-2.5 mb-space-lg">
+<li class="flex items-start gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+<span class="">Bennes amovibles et bacs étanches de 1m³ à 30m³</span>
+</li>
+<li class="flex items-start gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+<span class="">Planification modulable avec géolocalisation des rotations</span>
+</li>
+<li class="flex items-start gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+<span class="">Sécurisation de la manutention et bordereau de prise en charge</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="px-space-lg pb-space-lg pt-0">
+<a class="w-full inline-flex items-center justify-between px-5 py-3 rounded-xl bg-surface-container-low text-on-surface font-label-lg text-label-lg group-hover:bg-primary-container group-hover:text-on-primary transition-all" data-path="demander-un-devis" href="#">
+<span class="">Demander une rotation</span>
+<span class="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Service 2: Traitement et Destruction -->
+<article class="service-card flex flex-col justify-between bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group" data-category="industrie">
+<div>
+<div class="relative h-56 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="High-tech modern industrial incinerator facility with clean emission filtering stacks and control panels in an advanced environmental treatment center, industrial scale processing unit with certified safety standards" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjRPvjX9A5UhL96go41v1psnc6bG7WZ9F-ZHwObs6zgj9LnCq7jqHuAOlnyko5SUkMbBtSuBrH2j5eop_LIwrqwCUkw5ootfSh6bF4phtiAlwK3Z0vqFXjYGjUaM6iMhZk2XViQKGuoscf-l1nRfQ2-NyjCBcKRbpccf5RnXbzrTfpT0tYxCekeS7CwenOoSbdgxdr1KB32F0F9wYiRRVWtcm1dio88Xu6a9v4EfwM7y00wBQssfPR">
+<div class="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-caps text-label-caps uppercase tracking-wider font-bold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                Destruction Certifiée
+              </div>
+</div>
+<div class="p-space-lg flex flex-col">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low text-secondary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-2xl">precision_manufacturing</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight mb-space-xs group-hover:text-secondary transition-colors">
+                Traitement &amp; destruction thermique
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+                Élimination conforme de produits périmés, invendus, matières sensibles ou déchets dangereux sous supervision d'huissier ou d'inspecteurs officiels.
+              </p>
+<ul class="flex flex-col gap-2.5 mb-space-lg">
+<li class="flex items-start gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-base mt-0.5">check_circle</span>
+<span class="">Incinération à double chambre pyrolytique (+1100°C)</span>
+</li>
+<li class="flex items-start gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-base mt-0.5">check_circle</span>
+<span class="">Laveur de fumées et neutralisation stricte des effluents</span>
+</li>
+<li class="flex items-start gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-base mt-0.5">check_circle</span>
+<span class="">Certificat officiel de destruction juridique et fiscale</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="px-space-lg pb-space-lg pt-0">
+<a class="w-full inline-flex items-center justify-between px-5 py-3 rounded-xl bg-surface-container-low text-on-surface font-label-lg text-label-lg group-hover:bg-secondary group-hover:text-on-secondary transition-all" data-path="demander-un-devis" href="#">
+<span class="">Programmer une destruction</span>
+<span class="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Service 3: Valorisation Matière -->
+<article class="service-card flex flex-col justify-between bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group" data-category="industrie">
+<div>
+<div class="relative h-56 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Eco-friendly recycling and sorting conveyor belt sorting compressed cardboard, plastics and metal scrap in a state-of-the-art circular economy waste recovery plant, bright daylight and organized sorting workflow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-V0CbMzW_AIMHqMlNdnhlH7b_ux707toPo_xjDkL3r2mtqLL1TBfz_gbStidWcLULPl_xyNgCbsfo4FhnvKya29gROcANh7l5biH6LuskRJdkZNswMapv9pnnudbI7xyCpcQeG0FjC6vkWl90ChAS1oL87XKDRbX7KX7PwMjrDX9O3apVMMo6dVzIkjXlUkAZgEGAsVuWfu8Dvf1o3LxaQhcvJzgo-XzJ0yUkvFknTtDpo2k4gFei">
+<div class="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-caps text-label-caps uppercase tracking-wider font-bold">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                Économie Circulaire
+              </div>
+</div>
+<div class="p-space-lg flex flex-col">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low text-primary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-2xl">recycling</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight mb-space-xs group-hover:text-primary transition-colors">
+                Valorisation matière des déchets
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+                Revalorisation technique des sous-produits d'activité pour réintégrer les matières dans le circuit industriel et minimiser votre empreinte carbone.
+              </p>
+<ul class="flex flex-col gap-2.5 mb-space-lg">
+<li class="flex items-start gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+<span class="">Tri mécanique et manuel des polymères, cartons et métaux</span>
+</li>
+<li class="flex items-start gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+<span class="">Broyage, compactage en balles haute densité pour le recyclage</span>
+</li>
+<li class="flex items-start gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+<span class="">Rapport d'évitement carbone (Bilan RSE d'entreprise)</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="px-space-lg pb-space-lg pt-0">
+<a class="w-full inline-flex items-center justify-between px-5 py-3 rounded-xl bg-surface-container-low text-on-surface font-label-lg text-label-lg group-hover:bg-primary-container group-hover:text-on-primary transition-all" data-path="demander-un-devis" href="#">
+<span class="">Audit de recyclabilité</span>
+<span class="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Service 4: Démantèlement & Dépollution -->
+<article class="service-card flex flex-col justify-between bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group" data-category="industrie">
+<div>
+<div class="relative h-56 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Industrial decontamination technicians wearing full protective hazmat suits and respirators safely clearing and dismantling an obsolete industrial production site, high safety standards" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGb0Cw4N4z31tOeokizhsdK4RCWFiZ6dEerWF8vCQsd73rTDg1NjzWcFkjFJN9jqyuZ-bksSoK9bCbDDFL7kadDJ9uWtXC6bLD0RDkdiSbdvWAA5qcheujuDtXAcs8gSfdggbKrt_gO2LRdCrgft7ddcJ8fb6YbrLsfwppjwbzghq_vDZF3k1xeQJPO7Lqj-BwLoVkwdBsrGNA5KWi0kcKNf9NDJnFWMhMDQoffQZc76RYhTjtAaBO">
+<div class="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-caps text-label-caps uppercase tracking-wider font-bold">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+                Génie Écologique &amp; Sites
+              </div>
+</div>
+<div class="p-space-lg flex flex-col">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low text-on-surface flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-2xl">cleaning_services</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight mb-space-xs group-hover:text-primary transition-colors">
+                Démantèlement et dépollution
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+                Intervention spécialisée sur friches industrielles, cuves pétrolières, entrepôts désaffectés et sites requérant une neutralisation chimique ou biologique.
+              </p>
+<ul class="flex flex-col gap-2.5 mb-space-lg">
+<li class="flex items-start gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+<span class="">Diagnostic préalable des polluants et plan de phasage sécurisé</span>
+</li>
+<li class="flex items-start gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+<span class="">Curage, dégazage de réservoirs et évacuation des boues toxiques</span>
+</li>
+<li class="flex items-start gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+<span class="">Remise en état du sol selon le référentiel environnemental national</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="px-space-lg pb-space-lg pt-0">
+<a class="w-full inline-flex items-center justify-between px-5 py-3 rounded-xl bg-surface-container-low text-on-surface font-label-lg text-label-lg group-hover:bg-primary-container group-hover:text-on-primary transition-all" data-path="demander-un-devis" href="#">
+<span class="">Étude de site</span>
+<span class="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Service 5: Formation & Conseil HSE -->
+<article class="service-card flex flex-col justify-between bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group" data-category="formation">
+<div>
+<div class="relative h-56 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="HSE training session in a modern corporate conference room in Ivory Coast with African engineers, plant managers, and instructors looking at safety waste disposal protocols with interactive digital charts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKVlJqeGCgCzRccCxeH7bBTHknHFriS-iYskRO8qOR2CofSC2zRnzzCKjjn9sgHuQDQ5Hk3niz2q0Pd8MfP0T9Km0vVjKTty6udPHvKVGyPIVOgLLwrX6B0Vp5UhnjwoyZC9zbYntbLFSq7KJlf9J1ONF-Wj4DHd2NdojzoYWbENShfgwefadqX_i8bvq9khdbdJ8ffKJNjyXUKPN4FG_SDva6FijC6CWcGbQTnWf_eYWtfqVx6zUC">
+<div class="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-caps text-label-caps uppercase tracking-wider font-bold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                Capacités &amp; Réglementation
+              </div>
+</div>
+<div class="p-space-lg flex flex-col">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low text-secondary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-2xl">school</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight mb-space-xs group-hover:text-secondary transition-colors">
+                Formation &amp; gestion des déchets
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+                Programmes certifiants pour équipes opérationnelles et cadres HSE afin d'optimiser le tri à la source et prévenir les accidents professionnels.
+              </p>
+<ul class="flex flex-col gap-2.5 mb-space-lg">
+<li class="flex items-start gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-base mt-0.5">check_circle</span>
+<span class="">Sensibilisation au tri sélectif et manipulation des EPI adaptés</span>
+</li>
+<li class="flex items-start gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-base mt-0.5">check_circle</span>
+<span class="">Maîtrise du cadre légal ivoirien et obligations de déclaration</span>
+</li>
+<li class="flex items-start gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-base mt-0.5">check_circle</span>
+<span class="">Ateliers pratiques in situ et délivrance d’attestations d'aptitude</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="px-space-lg pb-space-lg pt-0">
+<a class="w-full inline-flex items-center justify-between px-5 py-3 rounded-xl bg-surface-container-low text-on-surface font-label-lg text-label-lg group-hover:bg-secondary group-hover:text-on-secondary transition-all" data-path="demander-un-devis" href="#">
+<span class="">Découvrir le catalogue</span>
+<span class="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Service 6: Management des DASRI -->
+<article class="service-card flex flex-col justify-between bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group" data-category="sante">
+<div>
+<div class="relative h-56 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Strict medical waste management facility with certified yellow biohazard sharp containers DASRI in a sterile hospital logistics corridor, professional staff in biological protection equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7QzWvy-edku20j8WGPKZBmDvp-a1qM-ILuhtUaAjBAAT8XeCuxpojGyuO9aWJsa6QTHNJwpJ3UE2myxv--eLt9qBRZo14yhaysRLMrkZlf34tSLG-_HDZr1qOkRk6O732dkaUTfn1Km0Fwl9t8LjOMfCEkV-oLmXIMN_OdQjy8N0MWRsrtjzC4F4gH7c5xIEqlWgchWoSEUEIumB8WkuPEwlOU6A86spQCc54yvi8dqXAsjeypgDr">
+<div class="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-error font-label-caps text-label-caps uppercase tracking-wider font-bold">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+                Norme Sanitaire DASRI
+              </div>
+</div>
+<div class="p-space-lg flex flex-col">
+<div class="w-12 h-12 rounded-xl bg-error-container/40 text-error flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-2xl">medical_services</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight mb-space-xs group-hover:text-error transition-colors">
+                Système de management des DASRI
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+                Filière médicale hautement sécurisée pour cliniques, centres hospitaliers, laboratoires d'analyses et cabinets de soins à travers le pays.
+              </p>
+<ul class="flex flex-col gap-2.5 mb-space-lg">
+<li class="flex items-start gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+<span class="">Fourniture de fûts et boîtes à aiguilles homologués ONU</span>
+</li>
+<li class="flex items-start gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+<span class="">Véhicules frigorifiques dédiés avec verrouillage blindé</span>
+</li>
+<li class="flex items-start gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+<span class="">Bordereau de Suivi des Déchets Infectieux (BSDI) horodaté</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="px-space-lg pb-space-lg pt-0">
+<a class="w-full inline-flex items-center justify-between px-5 py-3 rounded-xl bg-surface-container-low text-on-surface font-label-lg text-label-lg group-hover:bg-error group-hover:text-on-error transition-all" data-path="demander-un-devis" href="#">
+<span class="">Protéger votre établissement</span>
+<span class="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Interactive Workflow / Traceability Assurance Section -->
+<section class="w-full bg-surface-container-low py-16 lg:py-24">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div class="max-w-2xl">
+<span class="font-label-caps text-label-caps text-primary tracking-wider uppercase font-bold">Sécurité &amp; Conformité 360°</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight mt-space-xs">
+            Un protocole infaillible de la prise en charge au bordereau final
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Chaque kilogramme de déchet confié à Fontaine Verte fait l’objet d’un jalonnement numérique transparent, garantissant votre conformité juridique complète.
+        </p>
+</div>
+<!-- Process Interactive Cards -->
+<div class="grid grid-cols-1 md:grid-cols-5 gap-space-md relative">
+<!-- Step 1 -->
+<div class="flex flex-col bg-surface-container-lowest p-space-md rounded-2xl shadow-sm relative group hover:shadow-md transition-all">
+<div class="flex items-center justify-between mb-space-md">
+<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary font-bold flex items-center justify-center font-label-lg text-label-lg">01</span>
+<span class="material-symbols-outlined text-primary text-2xl">content_paste_search</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs">Diagnostic</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Caractérisation physique et chimique des flux de déchets sur votre site.</p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col bg-surface-container-lowest p-space-md rounded-2xl shadow-sm relative group hover:shadow-md transition-all">
+<div class="flex items-center justify-between mb-space-md">
+<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary font-bold flex items-center justify-center font-label-lg text-label-lg">02</span>
+<span class="material-symbols-outlined text-primary text-2xl">local_shipping</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs">Enlèvement</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Collecte scellée et transport sécurisé par nos chauffeurs formés ADR.</p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col bg-surface-container-lowest p-space-md rounded-2xl shadow-sm relative group hover:shadow-md transition-all">
+<div class="flex items-center justify-between mb-space-md">
+<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary font-bold flex items-center justify-center font-label-lg text-label-lg">03</span>
+<span class="material-symbols-outlined text-primary text-2xl">sort</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs">Tri &amp; Pesée</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Pesée sur pont-bascule étalonné et tri minutieux par filières autorisées.</p>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col bg-surface-container-lowest p-space-md rounded-2xl shadow-sm relative group hover:shadow-md transition-all">
+<div class="flex items-center justify-between mb-space-md">
+<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary font-bold flex items-center justify-center font-label-lg text-label-lg">04</span>
+<span class="material-symbols-outlined text-primary text-2xl">local_fire_department</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs">Neutralisation</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Incinération contrôlée ou revalorisation matière sans risque écotoxique.</p>
+</div>
+<!-- Step 5 -->
+<div class="flex flex-col bg-surface-container-lowest p-space-md rounded-2xl shadow-sm relative group hover:shadow-md transition-all">
+<div class="flex items-center justify-between mb-space-md">
+<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary font-bold flex items-center justify-center font-label-lg text-label-lg">05</span>
+<span class="material-symbols-outlined text-primary text-2xl">assignment_turned_in</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs">BSD Livrable</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Émission du bordereau légal de suivi et archivage numérique conforme.</p>
+</div>
+</div>
+<!-- Live interactive Simulator Box -->
+<div class="mt-space-xl bg-surface-container-lowest p-space-lg lg:p-space-xl rounded-2xl shadow-sm">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<div class="lg:col-span-5 flex flex-col">
+<span class="font-label-caps text-label-caps text-primary tracking-wider uppercase font-bold">Simulateur d'intervention</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-bold mt-1 mb-space-sm">
+              Quel type de déchet souhaitez-vous traiter ?
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Sélectionnez vos critères pour obtenir immédiatement les prérequis réglementaires et la solution logistique préconisée.
+            </p>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Secteur opérationnel</label>
+<select class="w-full h-11 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md focus:outline-none focus:ring-2 focus:ring-primary" id="sim-sector" onchange="updateSimulator()">
+<option value="industriel">Usine &amp; Industrie manufacturière</option>
+<option value="medical">Hôpital, Clinique, Cabinet médical</option>
+<option value="btp">Chantier BTP, Dépollution de site</option>
+<option value="tertiaire">Bureaux, Entrepôt logistique, Agroalimentaire</option>
+</select>
+</div>
+</div>
+<div class="lg:col-span-7 bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between" id="sim-result">
+<div>
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="material-symbols-outlined text-primary text-2xl">verified</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold" id="sim-title">Filière Industrielle &amp; Produits Techniques</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md" id="sim-desc">
+                Conditionnement recommandé en fûts PEHD ou bennes scellées. Traitement prioritaire par destruction thermique pyrolytique ou recyclage des flux ferreux et polymères.
+              </p>
+<div class="grid grid-cols-2 gap-space-sm mb-space-md">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg">
+<span class="font-label-caps text-label-caps text-on-surface-variant block uppercase font-bold">Livrable réglementaire</span>
+<span class="font-label-lg text-label-lg text-primary font-bold" id="sim-doc">Bordereau BSDI + Certificat Huissier</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg">
+<span class="font-label-caps text-label-caps text-on-surface-variant block uppercase font-bold">Délais d'intervention</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold" id="sim-time">24h à 48h ouvrées</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-body-sm text-on-surface-variant">Besoin d'une inspection préalable ?</span>
+<a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary transition-colors" data-path="demander-un-devis" href="#">
+<span class="">Programmer l'enlèvement</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Infrastructure Spotlight -->
+<section class="w-full py-16 lg:py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="bg-surface-container-high rounded-3xl p-space-lg lg:p-space-xl relative overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center relative z-10">
+<div class="lg:col-span-6 flex flex-col">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest text-primary font-label-caps text-label-caps uppercase tracking-wider font-bold mb-space-sm w-fit">
+<span class="material-symbols-outlined text-base">local_fire_department</span>
+              Incinérateur de pointe
+            </div>
+<h2 class="font-display-hero-mobile text-display-hero-mobile lg:text-headline-xl font-extrabold text-on-surface tracking-tight mb-space-sm">
+              Un équipement thermique respectueux des plus hauts standards
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md leading-relaxed">
+              Fontaine Verte dispose d'installations fixes et de groupes d'incinération haute performance dotés d'une laveuse de fumées par voie humide, assurant la destruction totale des pathogènes sans rejets nocifs dans l'atmosphère.
+            </p>
+<div class="grid grid-cols-2 gap-space-md mb-space-lg">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">air</span>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold block">Filtres HEPA</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Captation des micro-particules à 99.9%</span>
+</div>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">thermostat</span>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold block">1200°C</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Post-combustion immédiate</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-md">
+<a class="inline-flex items-center gap-space-xs px-6 py-3 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg shadow-md hover:bg-primary transition-all" data-path="equipements" href="#">
+<span class="">Découvrir nos équipements</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-space-xs px-6 py-3 rounded-full bg-surface-container-lowest text-on-surface font-label-lg text-label-lg shadow-sm hover:bg-surface transition-all" data-path="contact" href="#">
+<span class="">Visiter nos installations</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-6 relative">
+<div class="rounded-2xl overflow-hidden shadow-xl aspect-4/3 relative">
+<img class="w-full h-full object-cover" data-alt="Industrial modern waste incinerator machine with two vertical combustion chimneys and water scrubber filtration system in Abidjan Ivory Coast in a pristine green industrial facility" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALzzlgFCp4vLOP3KnsVR7RUIBV4xjs5uKWlyluiPmBhUXd4R6_wtepD6fErZtM6fK906TwPpYNO5x41XMbF-kz9fO13YZjQ7UTdnNhFqzBwQgNs9ZCs2nnSqnSyGgujJwTvcpfa756o-f0nVAGs9OJTslpurlqLwzDATG06NzoD-KxGB1IOIuV08GbvsoAXiJSoAJM3qfGySvSNrdKPobe_fpmPOKexc8yRsbAucPbt970B8y2_MBn">
+<div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-surface-container-lowest/90 backdrop-blur-md shadow-sm flex items-center justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold block">Site d'exploitation</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Base industrielle Yopougon</span>
+</div>
+<span class="inline-flex items-center gap-1 text-primary font-label-lg text-label-lg font-bold">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+                  Opérationnel 24/7
+                </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final Call to Action -->
+<section class="w-full py-16 lg:py-20 bg-primary-container text-on-primary relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-primary to-primary-container opacity-90"></div>
+<div class="max-w-7xl mx-auto px-margin relative z-10">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-space-xl text-center lg:text-left">
+<div class="max-w-2xl flex flex-col">
+<span class="font-label-caps text-label-caps text-on-primary-container uppercase tracking-wider font-extrabold mb-space-xs">
+            Engagement Éco-Responsable
+          </span>
+<h2 class="font-headline-xl text-headline-xl text-on-primary font-extrabold tracking-tight mb-space-xs">
+            Agissons aujourd'hui pour un environnement plus sain
+          </h2>
+<p class="font-body-lg text-body-lg text-on-primary-container/90">
+            Contactez nos ingénieurs pour un diagnostic gratuit de vos gisements de déchets ou un devis contractuel adapté à votre rythme de production.
+          </p>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-space-md">
+<a class="inline-flex items-center justify-center gap-space-xs px-8 py-3.5 rounded-full bg-surface text-primary font-label-lg text-label-lg shadow-lg hover:bg-surface-container-lowest transition-all hover:scale-105 active:scale-95" data-path="demander-un-devis" href="#">
+<span class="material-symbols-outlined text-xl">description</span>
+<span class="">Demander un devis en ligne</span>
+</a>
+<a class="inline-flex items-center justify-center gap-space-xs px-7 py-3.5 rounded-full bg-primary-container text-on-primary border-2 border-on-primary font-label-lg text-label-lg hover:bg-surface hover:text-primary transition-all" data-path="contact" href="#">
+<span class="material-symbols-outlined text-xl">phone_in_talk</span>
+<span class="">+225 07 57 94 74 40</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  function filterServices(category) {
+    const cards = document.querySelectorAll('.service-card');
+    const buttons = document.querySelectorAll('.filter-btn');
+
+    buttons.forEach(btn => {
+      if (btn.getAttribute('data-filter') === category) {
+        btn.classList.add('bg-primary-container', 'text-on-primary', 'shadow-sm');
+        btn.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+      } else {
+        btn.classList.remove('bg-primary-container', 'text-on-primary', 'shadow-sm');
+        btn.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+      }
+    });
+
+    cards.forEach(card => {
+      if (category === 'all' || card.getAttribute('data-category') === category) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  function updateSimulator() {
+    const select = document.getElementById('sim-sector');
+    const val = select.value;
+    const title = document.getElementById('sim-title');
+    const desc = document.getElementById('sim-desc');
+    const doc = document.getElementById('sim-doc');
+    const time = document.getElementById('sim-time');
+
+    if (val === 'medical') {
+      title.innerText = 'Filière DASRI & Déchets de Soins Médicaux';
+      desc.innerText = 'Fûts scellés rigides, sacs jaunes normalisés et fûts pour aiguilles. Élimination obligatoire en four à très haute température (>1100°C).';
+      doc.innerText = 'Bordereau BSDI Sanitaire + Registre';
+      time.innerText = 'Intervention quotidienne ou bi-hebdomadaire';
+    } else if (val === 'btp') {
+      title.innerText = 'Chantiers BTP, Déblais & Réhabilitation';
+      desc.innerText = 'Bennes grand volume (15m³ à 30m³), tri des gravats inertes, valorisation métallique et sécurisation des terres polluées.';
+      doc.innerText = 'Certificat de Dépollution de Site';
+      time.innerText = 'Rotation programmée sous 24h';
+    } else if (val === 'tertiaire') {
+      title.innerText = 'Bureaux, Grande Distribution & Agroalimentaire';
+      desc.innerText = 'Bacs sélectifs de tri pour papiers, cartons, plastiques et destruction sécurisée des invendus périmés.';
+      doc.innerText = 'Attestation Fiscale de Destruction';
+      time.innerText = 'Passage hebdomadaire ou bimensuel';
+    } else {
+      title.innerText = 'Filière Industrielle & Produits Techniques';
+      desc.innerText = 'Conditionnement recommandé en fûts PEHD ou bennes scellées. Traitement prioritaire par destruction thermique ou recyclage matière.';
+      doc.innerText = 'Bordereau BSDI + Certificat Huissier';
+      time.innerText = '24h à 48h ouvrées';
+    }
+  }
+</script></main><footer class="w-full bg-surface-container-lowest text-on-surface shadow-[0_-1px_12px_rgba(0,0,0,0.03)]"><div class="max-w-7xl mx-auto px-margin pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-xl pb-space-xl"><div class="lg:col-span-4 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center"><span class="material-symbols-outlined text-2xl">eco</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight leading-tight">Fontaine Verte</span><span class="font-label-caps text-label-caps text-primary font-bold tracking-wider uppercase">Notre souci, un monde sain !</span></div></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Opérateur certifié d'ingénierie environnementale en Côte d'Ivoire. Collecte spécialisée, transport sécurisé et traitement agréé des déchets industriels et biomédicaux (DASRI).</p><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-primary text-xl">verified_user</span><span class="font-label-md text-label-md text-on-surface font-semibold">Agréé Ministère de l'Environnement</span></div></div><div class="lg:col-span-3 flex flex-col gap-space-md"><span class="font-headline-sm text-headline-sm text-on-surface font-bold">Liens rapides</span><nav class="flex flex-col gap-space-xs" data-active-classes="text-primary font-bold"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="accueil" href="#">Accueil</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="a-propos" href="#">À propos</a><a aria-current="page" class="transition-colors text-primary font-bold" data-path="nos-services" href="#">Nos services</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="equipements" href="#">Équipements</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="#">Contact</a></nav></div><div class="lg:col-span-5 flex flex-col gap-space-md"><span class="font-headline-sm text-headline-sm text-on-surface font-bold">Siège social &amp; Contact</span><div class="flex flex-col gap-space-sm text-on-surface-variant font-body-md text-body-md"><div class="flex items-start gap-space-sm"><span class="material-symbols-outlined text-primary text-xl mt-0.5">location_on</span><span class="">Abidjan, Yopougon, Gnandobité, Belle Air du Banco, lot 30, îlot 6</span></div><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-xl">markunread_mailbox</span><span class="">11 BP 2497 Abidjan 11</span></div><div class="flex items-start gap-space-sm"><span class="material-symbols-outlined text-primary text-xl mt-0.5">call</span><div class="flex flex-col gap-1"><a class="hover:text-primary transition-colors" href="tel:+2250757947440">+225 07 57 94 74 40</a><a class="hover:text-primary transition-colors" href="tel:+2250757176987">+225 07 57 17 69 87</a><a class="hover:text-primary transition-colors" href="tel:+2250140585858">+225 01 40 58 58 58</a></div></div><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-xl">mail</span><a class="hover:text-primary transition-colors" href="mailto:contact@fontaineverte.ci">contact@fontaineverte.ci</a></div></div></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md bg-surface-container-low px-space-md py-space-sm rounded-xl"><div class="flex flex-col sm:flex-row items-center gap-space-sm text-center sm:text-left"><span class="font-body-sm text-body-sm text-on-surface-variant">© 2024 Fontaine Verte. Tous droits réservés.</span><span class="hidden sm:inline text-outline-variant">•</span><span class="font-label-caps text-label-caps text-primary font-bold uppercase tracking-wider">Notre souci, un monde sain !</span></div><div class="flex items-center gap-space-sm"><a aria-label="Certifications" class="w-9 h-9 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg">workspace_premium</span></a><a aria-label="Rapports" class="w-9 h-9 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg">description</span></a><a aria-label="Partager" class="w-9 h-9 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg">share</span></a></div></div></div></footer>
+
+</body></html>

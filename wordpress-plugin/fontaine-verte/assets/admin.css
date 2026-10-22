@@ -1,0 +1,524 @@
+/* ==========================================================================
+   FONTAINE VERTE SARL — White-Label WordPress Admin Theme & Dashboard
+   ========================================================================== */
+
+/* 1. PALETTE DE COULEURS GLOBALE & BARRE D'ADMINISTRATION */
+#wpadminbar {
+    background: linear-gradient(90deg, #002b12 0%, #004d20 50%, #003654 100%) !important;
+    border-bottom: 1px solid rgba(149, 248, 167, 0.2) !important;
+}
+
+#wpadminbar .ab-item,
+#wpadminbar a.ab-item {
+    color: #e4fae7 !important;
+    font-weight: 600 !important;
+}
+
+#wpadminbar:not(.mobile) .ab-top-menu > li:hover > .ab-item,
+#wpadminbar:not(.mobile) .ab-top-menu > li > .ab-item:focus,
+#wpadminbar .ab-top-menu > li.hover > .ab-item {
+    background-color: #00652c !important;
+    color: #ffffff !important;
+}
+
+#wpadminbar #wp-admin-bar-wp-logo > .ab-item .ab-icon:before {
+    content: "\f323" !important; /* Dashicon eco/leaf */
+    color: #95f8a7 !important;
+    top: 2px !important;
+}
+
+/* 2. MENU LATÉRAL D'ADMINISTRATION (VERT FORÊT NOCTURNE & ÉMERAUDE) */
+#adminmenuback,
+#adminmenuwrap,
+#adminmenu {
+    background-color: #0c1910 !important;
+}
+
+#adminmenu a {
+    color: #d1ded5 !important;
+    font-weight: 500 !important;
+}
+
+#adminmenu li.menu-top:hover,
+#adminmenu li.opensub > a.menu-top,
+#adminmenu li > a.menu-top:focus {
+    background-color: #14281b !important;
+    color: #95f8a7 !important;
+}
+
+#adminmenu li.menu-top:hover div.wp-menu-image:before {
+    color: #95f8a7 !important;
+}
+
+/* Élément Actif / Sélectionné */
+#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu,
+#adminmenu li.current a.menu-top,
+.folded #adminmenu li.current.menu-top {
+    background: linear-gradient(90deg, #00652c 0%, #15803d 100%) !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    border-left: 4px solid #95f8a7 !important;
+}
+
+#adminmenu li.wp-has-current-submenu div.wp-menu-image:before,
+#adminmenu li.current div.wp-menu-image:before {
+    color: #ffffff !important;
+}
+
+/* Sous-menus dépliés */
+#adminmenu .wp-submenu {
+    background-color: #07100b !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+}
+
+#adminmenu .wp-submenu a {
+    color: #b9ccbe !important;
+}
+
+#adminmenu .wp-submenu a:hover,
+#adminmenu .wp-submenu a:focus {
+    background-color: #13271b !important;
+    color: #79db8d !important;
+}
+
+#adminmenu .wp-submenu li.current a {
+    color: #95f8a7 !important;
+    font-weight: 700 !important;
+}
+
+/* Mise en avant du menu Fontaine Verte */
+#adminmenu li.menu-top.toplevel_page_fontaine-verte-menu {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: rgba(0, 101, 44, 0.3) !important;
+    border-radius: 6px;
+    border: 1px solid rgba(149, 248, 167, 0.2);
+}
+
+#adminmenu li.menu-top.toplevel_page_fontaine-verte-menu div.wp-menu-image:before {
+    color: #95f8a7 !important;
+}
+
+/* 3. SIMPLIFICATION DE WP-ADMIN */
+#welcome-panel,
+.welcome-panel {
+    display: none !important;
+}
+
+#dashboard-widgets .empty-container {
+    display: none !important;
+}
+
+/* 4. BOUTONS FONTAINE VERTE */
+.wrap.fv-admin-wrap .button-primary,
+.fv-card .button-primary,
+#fv_widget_hero .button-primary {
+    background: #00652c !important;
+    border-color: #005323 !important;
+    color: #ffffff !important;
+    text-shadow: none !important;
+    box-shadow: 0 2px 6px rgba(0, 101, 44, 0.25) !important;
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+    padding: 6px 16px !important;
+    transition: all 0.2s ease !important;
+}
+
+/* 5. STYLISATION MODERNE DES WIDGETS DU TABLEAU DE BORD */
+#dashboard-widgets .postbox {
+    border-radius: 16px !important;
+    border: 1px solid #dae2fd !important;
+    box-shadow: 0 4px 20px rgba(19, 27, 46, 0.04) !important;
+    margin-bottom: 20px !important;
+    background: #ffffff !important;
+}
+
+#dashboard-widgets .postbox-header {
+    background: #faf8ff !important;
+    border-bottom: 1px solid #dae2fd !important;
+    padding: 12px 18px !important;
+}
+
+#dashboard-widgets .postbox-header h2 {
+    font-size: 14px !important;
+    font-weight: 800 !important;
+    color: #131b2e !important;
+    letter-spacing: -0.2px;
+}
+
+/* 6. COMPOSANTS DES WIDGETS FONTAINE VERTE */
+
+/* Hero Widget */
+.fv-dash-hero {
+    background: linear-gradient(135deg, #004b20 0%, #00652c 40%, #005380 100%);
+    border-radius: 14px;
+    padding: 24px;
+    color: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 75, 32, 0.15);
+}
+
+.fv-hero-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.fv-hero-badge {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    flex-shrink: 0;
+}
+
+.fv-hero-title {
+    margin: 0 !important;
+    color: #ffffff !important;
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+}
+
+.fv-hero-motto {
+    margin: 4px 0 0 0 !important;
+    color: #95f8a7 !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    font-style: italic;
+}
+
+.fv-hero-desc {
+    font-size: 13px !important;
+    color: #e4fae7 !important;
+    line-height: 1.5 !important;
+    margin: 0 0 16px 0 !important;
+}
+
+.fv-hero-status-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.fv-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.fv-pill-green {
+    background: rgba(149, 248, 167, 0.2);
+    color: #ffffff;
+    border: 1px solid rgba(149, 248, 167, 0.4);
+}
+
+.fv-pill-blue {
+    background: rgba(123, 194, 255, 0.2);
+    color: #ffffff;
+    border: 1px solid rgba(123, 194, 255, 0.4);
+}
+
+.fv-pill-purple {
+    background: rgba(234, 237, 255, 0.2);
+    color: #ffffff;
+    border: 1px solid rgba(234, 237, 255, 0.4);
+}
+
+.fv-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #95f8a7;
+    box-shadow: 0 0 8px #95f8a7;
+}
+
+.fv-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.fv-btn-primary {
+    background: #ffffff !important;
+    color: #00652c !important;
+    font-weight: 800 !important;
+    border-radius: 20px !important;
+    border: none !important;
+    padding: 6px 16px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.fv-btn-primary:hover {
+    background: #d3ffd5 !important;
+    color: #005323 !important;
+}
+
+.fv-btn-secondary {
+    background: rgba(255, 255, 255, 0.18) !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    border: 1px solid rgba(255, 255, 255, 0.35) !important;
+    border-radius: 20px !important;
+    padding: 6px 14px !important;
+}
+
+.fv-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.3) !important;
+    color: #ffffff !important;
+}
+
+.fv-btn-seed {
+    background: #15803d !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    border: 1px solid #79db8d !important;
+    border-radius: 20px !important;
+    padding: 6px 14px !important;
+    cursor: pointer;
+}
+
+.fv-btn-seed:hover {
+    background: #00652c !important;
+}
+
+/* KPI Grid */
+.fv-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 12px;
+}
+
+.fv-kpi-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.fv-kpi-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.fv-kpi-green {
+    background: #f2fbf4;
+    border-color: #d3ffd5;
+    color: #00652c;
+}
+
+.fv-kpi-blue {
+    background: #f2f7ff;
+    border-color: #cde5ff;
+    color: #006399;
+}
+
+.fv-kpi-amber {
+    background: #fffbf2;
+    border-color: #ffe6b0;
+    color: #8c5b00;
+}
+
+.fv-kpi-emerald {
+    background: #f5f3ff;
+    border-color: #e5deff;
+    color: #5b21b6;
+}
+
+.fv-kpi-icon {
+    font-size: 24px;
+}
+
+.fv-kpi-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.fv-kpi-val {
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+.fv-kpi-lbl {
+    font-size: 11px;
+    font-weight: 700;
+    opacity: 0.85;
+    margin-top: 2px;
+}
+
+/* Leads Table */
+.fv-table-leads {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.fv-table-leads th {
+    text-align: left;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #6f7a6e;
+    padding: 8px 10px;
+    border-bottom: 2px solid #eaedff;
+}
+
+.fv-table-leads td {
+    padding: 10px;
+    border-bottom: 1px solid #f0f2fd;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.fv-lead-link {
+    color: #131b2e;
+    text-decoration: none;
+    display: block;
+}
+
+.fv-lead-link:hover {
+    color: #00652c;
+}
+
+.fv-lead-date {
+    display: block;
+    font-size: 10px;
+    color: #88938a;
+    margin-top: 2px;
+}
+
+.fv-service-tag {
+    display: inline-block;
+    padding: 2px 6px;
+    background: #faf8ff;
+    border: 1px solid #dae2fd;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 600;
+    color: #006399;
+}
+
+.fv-status-pill {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.fv-status-new {
+    background: #ffdad6;
+    color: #93000a;
+}
+
+.fv-status-in_progress {
+    background: #cde5ff;
+    color: #004b74;
+}
+
+.fv-status-completed {
+    background: #d3ffd5;
+    color: #00652c;
+}
+
+/* Identity & Compliance Box */
+.fv-identity-box {
+    padding: 4px;
+}
+
+.fv-identity-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eaedff;
+}
+
+.fv-identity-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 14px 0;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #3f493f;
+}
+
+.fv-identity-list li {
+    margin-bottom: 5px;
+}
+
+.fv-deliverables-pill {
+    background: #f2fbf4;
+    border: 1px solid #d3ffd5;
+    border-left: 3px solid #00652c;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 11px;
+    color: #131b2e;
+    line-height: 1.5;
+}
+
+/* Headless Box */
+.fv-headless-box {
+    padding: 4px;
+}
+
+.fv-status-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+}
+
+.fv-status-list li {
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.fv-code-link {
+    font-family: monospace;
+    font-size: 11px;
+    color: #006399;
+    word-break: break-all;
+}
+
+.fv-btn-small {
+    font-size: 11px !important;
+    padding: 3px 10px !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+}
+
+/* Empty State */
+.fv-empty-state {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+/* Success Notice */
+.fv-success-notice {
+    border-left-color: #00652c !important;
+    background: #d3ffd5 !important;
+    color: #005323 !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0, 101, 44, 0.1) !important;
+}

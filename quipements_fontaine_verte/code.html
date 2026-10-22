@@ -1,0 +1,548 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>Fontaine Verte - Gestion et traitement des déchets</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed-dim": "#4ae176", "secondary-fixed-dim": "#94ccff", "on-tertiary-container": "#d5ffd5", "on-primary-fixed": "#00210a", "inverse-on-surface": "#eef0ff", "on-surface": "#131b2e", "surface-bright": "#faf8ff", "on-primary-container": "#d3ffd5", "on-tertiary": "#ffffff", "error": "#ba1a1a", "on-surface-variant": "#3f493f", "on-tertiary-fixed-variant": "#005321", "tertiary-container": "#008138", "error-container": "#ffdad6", "on-background": "#131b2e", "on-tertiary-fixed": "#002109", "surface-variant": "#dae2fd", "on-primary": "#ffffff", "on-error-container": "#93000a", "inverse-surface": "#283044", "secondary-container": "#7bc2ff", "surface-container": "#eaedff", "secondary": "#006399", "primary-container": "#15803d", "surface": "#faf8ff", "on-secondary-container": "#004f7b", "secondary-fixed": "#cde5ff", "inverse-primary": "#79db8d", "surface-container-highest": "#dae2fd", "surface-container-high": "#e2e7ff", "primary-fixed-dim": "#79db8d", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#001d32", "on-secondary": "#ffffff", "surface-tint": "#006d30", "on-primary-fixed-variant": "#005323", "surface-container-low": "#f2f3ff", "tertiary-fixed": "#6bff8f", "background": "#faf8ff", "outline": "#6f7a6e", "primary": "#00652c", "surface-dim": "#d2d9f4", "tertiary": "#00652b", "on-secondary-fixed-variant": "#004b74", "outline-variant": "#becabc", "primary-fixed": "#95f8a7", "on-error": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-mobile": "1rem", "space-lg": "1.5rem", "margin-mobile": "1.25rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "space-md": "1rem", "margin": "2rem", "gutter": "1.5rem" }, "fontFamily": { "body-sm": ["Manrope"], "body-md": ["Manrope"], "headline-xl": ["Manrope"], "label-md": ["Manrope"], "headline-md": ["Manrope"], "display-hero-mobile": ["Manrope"], "label-lg": ["Manrope"], "headline-xl-mobile": ["Manrope"], "headline-lg": ["Manrope"], "display-hero": ["Manrope"], "label-caps": ["Manrope"], "headline-sm": ["Manrope"], "body-lg": ["Manrope"] }, "fontSize": { "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "800" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-margin flex items-center justify-between gap-space-md"><a class="flex items-center gap-space-sm group text-left" data-path="accueil" href="#"><div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center transition-transform group-hover:scale-105"><span class="material-symbols-outlined text-2xl">eco</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight leading-tight group-hover:text-primary transition-colors">Fontaine Verte</span><span class="font-label-caps text-label-caps text-primary font-bold tracking-wider uppercase">Notre souci, un monde sain !</span></div></a><nav class="hidden xl:flex items-center gap-space-xs p-1 rounded-full bg-surface-container-low/60 mx-auto" data-active-classes="bg-surface-container-high text-primary font-bold rounded-full"><a class="px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="accueil" href="#">Accueil</a><a class="px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="a-propos" href="#">À propos</a><a class="px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="nos-services" href="#">Nos services</a><a class="px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="equipements" href="#">Équipements</a><a class="px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-md"><a class="inline-flex items-center justify-center gap-space-xs px-6 py-2.5 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg transition-all duration-200 hover:bg-primary shadow-[0_4px_16px_-2px_rgba(21,128,61,0.25)] hover:shadow-[0_8px_20px_-2px_rgba(21,128,61,0.35)] active:scale-95" data-path="demander-un-devis" href="#"><span class="">Demander un devis</span><span class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-0.5">arrow_forward</span></a><div class="hidden sm:flex items-center pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-fixed" src="https://lh3.googleusercontent.com/aida/AEtjO1VehV3jSECZEVpcCNdUIxJcXg09nSsgrIxDe7tUPnKoM7c0JiBLZxJpF5et-XMGZ4a0JHphEF_YzUwu9KioLO-RHq7NGDMJuUx4tEZlmtVkeijBkE2yZHMhLDEvaNI_L911LLfUugEuDIe6N5tazZiokKTIAdm7sWRfpfcU_bbBgdF7ZyY-8unnugzSoUPvNL1zussV5VgENY50jnsM7zjLAZRS7_W8H_d8usFpTTIc6OX6Gzd8jhEDUkT79jvyPM8pwA_Wi16vXw"></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Top Banner / Navigation context -->
+<section class="w-full bg-surface-container-low py-12 md:py-16">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-highest text-primary font-label-caps text-label-caps uppercase tracking-wider mb-4">
+<span class="material-symbols-outlined text-sm text-primary">precision_manufacturing</span>
+<span class="">Parc technique &amp; Technologies certifiées</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl md:text-display-hero text-on-surface font-extrabold tracking-tight leading-tight">
+            Nos Équipements <span class="text-primary font-extrabold">de Pointe</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-3 max-w-2xl">
+            Des technologies de traitement thermique modernes et des infrastructures logistiques rigoureusement conformes aux normes environnementales ivoiriennes et internationales.
+          </p>
+</div>
+<div class="flex items-center gap-3 self-start md:self-end">
+<a class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-surface-container-highest hover:bg-surface-dim text-on-surface font-label-lg text-label-lg transition-colors" href="#fiche-incinerateur">
+<span class="">Fiche technique</span>
+<span class="material-symbols-outlined text-base">expand_more</span>
+</a>
+<a class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg shadow-sm transition-all" data-path="demander-un-devis" href="#">
+<span class="">Audit de faisabilité</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Quick Metrics Ribbon -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 pt-8 bg-surface-container-lowest rounded-2xl p-6 shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed/40 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">local_fire_department</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">900 – 1 200°C</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Post-combustion thermique</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed/50 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">speed</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">70 à 90 kg/h</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Capacité nominale certifiée</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed/40 text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">air</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">100% Épuré</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Lavage des fumées humide</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-variant text-on-surface flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Conforme CI</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Norme CIAPOL &amp; Min. Env.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section Incinérateur Industriel -->
+<section class="w-full py-16 md:py-24 bg-surface" id="fiche-incinerateur">
+<div class="max-w-7xl mx-auto px-margin flex flex-col gap-12">
+<!-- Section Header -->
+<div class="flex flex-col max-w-2xl">
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-widest">Unité Centrale de Décontamination</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight mt-1">
+          L'Incinérateur Industriel à Haute Efficacité
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          Conçu pour l'élimination définitive des DASRI (Déchets d'Activités de Soins à Risques Infectieux) et des rebuts industriels spéciaux sans transfert de pollution dans l'atmosphère.
+        </p>
+</div>
+<!-- Bento layout: Industrial visual + Technical Spec Sheet -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+<!-- Visual & Live Monitoring Widget -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="relative w-full h-[420px] rounded-3xl overflow-hidden shadow-sm group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Photographie industrielle haute résolution d'un incinérateur thermique de pointe à deux chambres avec laveuse de fumées et cheminée d'évacuation verte, situé sur une plateforme de décontamination à Abidjan sous une lumière naturelle nette, équipement en acier industriel de teinte gris métallisé et vert olive, cuves de neutralisation visibles avec opérateurs en tenue de protection EPI complète" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeMbBO9rhOXZCGOTJ4yEW3HH9_R-6pZCsRgO-5GW5m-fRG1qNGtWwPc35FgjnEHG7QHbCuhNnG9EoTkmqIU-Yz7tiLcGYoCutL7rjq4vijcxHdy7Za9xFIUwkV4uk9B1Y_KdeExI_YBkCEEbewdHE7AS2Fyi1F88K4AjAM_sbJk5Kt4QjK_ESZI7-4iKbx7jDhfqP49pdp9C-fMyHzdM8wtD1tgaPn30ewlTNF1omxIRN0n7R8kqJT">
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/30 to-transparent flex flex-col justify-end p-8 text-on-primary">
+<div class="flex items-center gap-2 mb-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim animate-pulse"></span>
+<span class="font-label-md text-label-md uppercase tracking-wider font-semibold text-tertiary-fixed">Plateforme Opérationnelle Active</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold leading-tight">Système Pyrolytique Modulaire &amp; Neutralisation Chimique</h3>
+<p class="font-body-sm text-body-sm text-surface-container-high opacity-90 max-w-lg mt-1">
+                Installation agréée par l'Agence Nationale de l'Environnement et le Ministère en charge du Développement Durable en Côte d'Ivoire.
+              </p>
+</div>
+</div>
+<!-- Process Diagram / Thermal Loop Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="p-5 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary font-bold text-xs flex items-center justify-center">01</span>
+<span class="material-symbols-outlined text-primary text-xl">microwave</span>
+</div>
+<div class="mt-4">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Chambre Primaire</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Pyrolyse sous-stœchiométrique contrôlée (800 à 900°C) gazéifiant les matières complexes.</p>
+</div>
+</div>
+<div class="p-5 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded-full bg-secondary text-on-secondary font-bold text-xs flex items-center justify-center">02</span>
+<span class="material-symbols-outlined text-secondary text-xl">mode_heat</span>
+</div>
+<div class="mt-4">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Post-Combustion</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Maintien à 1 200°C avec temps de séjour supérieur à 2 secondes pour détruire les dioxines.</p>
+</div>
+</div>
+<div class="p-5 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded-full bg-tertiary text-on-tertiary font-bold text-xs flex items-center justify-center">03</span>
+<span class="material-symbols-outlined text-tertiary text-xl">water_voc</span>
+</div>
+<div class="mt-4">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Lavage &amp; Filtration</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Venturi de lavage et barrière catalytique arrêtant 99,8% des particules acides et suies.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Technical Specification Sheet -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between pb-4">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold">Dossier Technique</span>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">Spécifications Fabricant</h3>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-primary flex items-center justify-center">
+<span class="material-symbols-outlined">data_object</span>
+</div>
+</div>
+<!-- Specs Grid -->
+<div class="flex flex-col gap-3.5">
+<div class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-low">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Débit opératoire continu</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">70 à 90 kg / heure</span>
+</div>
+<div class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-low">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Type de combustion</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Double chambre pyrolytique</span>
+</div>
+<div class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-low">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Température max. chambre 2</span>
+<span class="font-label-lg text-label-lg text-primary font-bold">Jusqu'à 1 200 °C</span>
+</div>
+<div class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-low">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Système de dépollution</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Laveuse de fumées humide</span>
+</div>
+<div class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-low">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Filtration des poussières</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Filtres épurateurs multi-étages</span>
+</div>
+<div class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-low">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Énergie &amp; Brûleur</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Atomisation contrôlée basse ém.</span>
+</div>
+<div class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-low">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Rejets atmosphériques</span>
+<span class="font-label-lg text-label-lg text-tertiary-container font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">done_all</span> Conformes OMS / CIAPOL
+                </span>
+</div>
+</div>
+<!-- Certifications mini banner -->
+<div class="p-4 rounded-xl bg-surface-container-high/60 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl shrink-0">shield_with_heart</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Enregistreur continu des températures et régulation PLC automatique interdisant tout défournement prématuré.
+              </p>
+</div>
+</div>
+<div class="pt-6">
+<a class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-primary text-on-primary font-label-lg text-label-lg hover:bg-on-primary-fixed-variant transition-colors shadow-sm" data-path="contact" href="#">
+<span class="material-symbols-outlined text-lg">download</span>
+<span class="">Télécharger le protocole de destruction DASRI</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Thermal Schema Section -->
+<section class="w-full py-16 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="bg-surface-container-lowest rounded-3xl p-8 md:p-12 shadow-sm">
+<div class="max-w-2xl mb-10">
+<span class="font-label-caps text-label-caps text-secondary uppercase font-bold tracking-widest">Fonctionnement Dynamique</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-extrabold mt-1">Circuit de Traitement Thermique &amp; Épuration</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+            Chaque lot de déchets suit un protocole inviolable en trois étapes synchronisées pour garantir une minéralisation totale des résidus sans fumées noires ni composés toxiques résiduels.
+          </p>
+</div>
+<!-- Inline Process Pipeline -->
+<div class="relative grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Step 1 -->
+<div class="relative p-6 rounded-2xl bg-surface-container-low flex flex-col justify-between group hover:bg-surface-container-high transition-colors">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center font-bold text-sm">Étape 1</span>
+<span class="material-symbols-outlined text-primary text-2xl">thermostat</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2">Pyrolyse Primaire (900°C)</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Les déchets conditionnés sont introduits dans la chambre réfractaire. Sous une atmosphère pauvre en oxygène, la matière organique est décomposée thermiquement en gaz combustibles et cendres inertes stériles.
+              </p>
+</div>
+<div class="mt-6 pt-4 flex items-center gap-2 text-primary font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-base">check_circle</span>
+<span class="">Stérilisation pathogène instantanée</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative p-6 rounded-2xl bg-surface-container-low flex flex-col justify-between group hover:bg-surface-container-high transition-colors">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-10 h-10 rounded-xl bg-secondary text-on-secondary flex items-center justify-center font-bold text-sm">Étape 2</span>
+<span class="material-symbols-outlined text-secondary text-2xl">whatshot</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2">Post-Combustion (1 200°C)</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Les gaz de pyrolyse transitent dans la seconde chambre surchauffée par un brûleur modulant avec injection d'air secondaire pour oxyder l'ensemble des gaz et éliminer les furanes et dioxines.
+              </p>
+</div>
+<div class="mt-6 pt-4 flex items-center gap-2 text-secondary font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-base">check_circle</span>
+<span class="">Temps de séjour gaz &gt; 2 sec.</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative p-6 rounded-2xl bg-surface-container-low flex flex-col justify-between group hover:bg-surface-container-high transition-colors">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-10 h-10 rounded-xl bg-tertiary-container text-on-tertiary flex items-center justify-center font-bold text-sm">Étape 3</span>
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-2xl">filter_alt</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2">Lavage Humide &amp; Filtres</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Les flux gazeux traversent une tour d'aspersion neutralisante (scrubber alcalin) qui capte le SO2, HCl et les métaux volatils avant un passage sur batterie de filtres dévésiculeurs.
+              </p>
+</div>
+<div class="mt-6 pt-4 flex items-center gap-2 text-tertiary-container font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-base">check_circle</span>
+<span class="">Rejet d'air blanc inodore épuré</span>
+</div>
+</div>
+</div>
+<!-- Inline Emission Monitor simulation visual -->
+<div class="mt-8 p-6 rounded-2xl bg-surface-container-high/40 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">troubleshoot</span>
+</div>
+<div>
+<h5 class="font-headline-sm text-headline-sm font-bold text-on-surface">Surveillance télémétrique en temps réel</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sondes optiques et capteurs multi-gaz reliés au poste de contrôle centralisé.</p>
+</div>
+</div>
+<!-- Visual chart / gauge component -->
+<div class="flex items-center gap-6">
+<div class="flex flex-col items-center">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold">O2 Résiduel</span>
+<span class="font-headline-sm text-headline-sm font-extrabold text-primary">6.4 %</span>
+</div>
+<div class="h-8 w-px bg-surface-dim"></div>
+<div class="flex flex-col items-center">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold">Monoxyde (CO)</span>
+<span class="font-headline-sm text-headline-sm font-extrabold text-primary">&lt; 15 mg/m³</span>
+</div>
+<div class="h-8 w-px bg-surface-dim"></div>
+<div class="flex flex-col items-center">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold">Poussières</span>
+<span class="font-headline-sm text-headline-sm font-extrabold text-primary">&lt; 8 mg/Nm³</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Logistique & Moyens Matériels Complémentaires -->
+<section class="w-full py-16 md:py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-margin flex flex-col gap-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-widest">Maillage Logistique Intégré</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight mt-1">
+            Moyens Logistiques et Matériels Dédiés
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          De la pré-collecte au transport agréé, Fontaine Verte mobilise une chaîne d'équipements étanches assurant l'intégrité absolue de la filière.
+        </p>
+</div>
+<!-- 3 Strategic Logistics Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1: Flotte Véhicules -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 shadow-sm flex flex-col justify-between group">
+<div class="flex flex-col gap-4">
+<div class="relative w-full h-52 rounded-2xl overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Flotte de camions professionnels spécialisés dans la collecte de déchets industriels et médicaux aux couleurs de Fontaine Verte, stationnés sur un parking logistique propre à Abidjan, véhicules modernes blancs avec logo vert et hayons élévateurs hydrauliques" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCym0Cn9zkMxn84kAsJ5p1MozWswuuG0Y8achHi8jtZZGiptL-jazX75vWsF3aY8TJjaj6qqDCMlH9ozdMuxsm3ZIrA2t2gz2Crj2T9El-AiP1uiPMJmeoEECGSdPQYv3q1vH9TG_7ssWX1LLjroBZROdgVKxKjqNfGi_c_NPV_2qq0lyCdyzV2Bjy88CKW76EMgeCdiCvayX2ZH8vyeYG3K8spFjkTfvRuE9k-H-5oZnTm9-c08-bl">
+<span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-container-lowest/90 font-label-caps text-label-caps text-primary uppercase font-bold backdrop-blur-sm">
+                Transport Homologué
+              </span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high text-primary flex items-center justify-center">
+<span class="material-symbols-outlined">local_shipping</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">Flotte de Collecte Sécurisée</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Véhicules fourgons étanches et camions à hayon élévateur hydraulique équipés de systèmes de géolocalisation GPS et de rétentions anti-fuite.
+            </p>
+<ul class="flex flex-col gap-2 pt-2">
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+<span class="">Bennes étanches et fourgons capitonnés</span>
+</li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+<span class="">Agrément ADR transport de matières dangereuses</span>
+</li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+<span class="">Traçabilité RFID &amp; suivi kilométrique en continu</span>
+</li>
+</ul>
+</div>
+<div class="pt-6">
+<span class="font-label-md text-label-md text-primary font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              Voir la capacité flotte →
+            </span>
+</div>
+</div>
+<!-- Card 2: Bacs & Contenants -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 shadow-sm flex flex-col justify-between group">
+<div class="flex flex-col gap-4">
+<div class="relative w-full h-52 rounded-2xl overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Alignement de bacs roulants industriels jaunes et verts pour déchets biomédicaux et fûts de rétention étanches fermés hermétiquement, étiquettes de danger biologique normalisées, entrepôt logistique propre et ordonné" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyzI8BgjeBW7LzHasKxMe5ZnOma_iWAOxHWX8UWBGjSROqMjFDFnEkzxSuOpRaANSktBGN_lRjsOwOHY2t3B4kWQZtf5WfHEQ9_9T3SAY89dyhMR2n3Pnsl-luEhj1B96rBhS7D-5Ab0Ef4mbybp1uX_pVlJh9Yg6YUYlJRDbMXqnnohJBfZ4kMFbmsKpwASj7M_e3Tp9C3xfKXtGAo9QFbwoUPkWkW9qCdTRR9bToXFck1hWIZifC">
+<span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-container-lowest/90 font-label-caps text-label-caps text-primary uppercase font-bold backdrop-blur-sm">
+                Conditionnement UN
+              </span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high text-primary flex items-center justify-center">
+<span class="material-symbols-outlined">inventory_2</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">Contenants Étanches Homologués</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Mise à disposition de bacs roulants aseptisés, de fûts métalliques et PEHD homologués UN pour solvants, huiles et DASRI perforants.
+            </p>
+<ul class="flex flex-col gap-2 pt-2">
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+<span class="">Bacs DASRI jaunes inviolables (120L, 240L, 660L)</span>
+</li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+<span class="">Boîtes pour objets piquants, coupants, tranchants (OPCT)</span>
+</li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+<span class="">Fûts étanches avec couvercles à bague de cerclage</span>
+</li>
+</ul>
+</div>
+<div class="pt-6">
+<span class="font-label-md text-label-md text-primary font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              Catalogue des contenants →
+            </span>
+</div>
+</div>
+<!-- Card 3: EPI & Sécurité -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 shadow-sm flex flex-col justify-between group">
+<div class="flex flex-col gap-4">
+<div class="relative w-full h-52 rounded-2xl overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Technicien en équipement de protection individuelle complet comprenant masque respiratoire à cartouche filtrante, combinaison de protection étanche, gants renforcés en nitrile et lunettes de sécurité manipulant du matériel de contrôle industriel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmydeEXtynvtNoRGh-A2oNWUX5oENlkTEQXEAEmXCaucKgsOyMz0xuTbfbhABRjpjHsESg0BeWiZaIvlXjKAfqqH7oN9RpTyhurD8r_s93SJ_04NXfDpRQjcO0d_p6o2xZh5pQwecrLMANU7fWTbptyOSHmseN5K7bfW4dKxJxBXpuMoUQqEBsRQ-qPSWHJ1MoVZ0JbOK3MWEHAyQ0sm_Tdu9fxSikn6fOC2cGTXlnH44m_4S9Y74u">
+<span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-container-lowest/90 font-label-caps text-label-caps text-primary uppercase font-bold backdrop-blur-sm">
+                Zéro Compromis Sécurité
+              </span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high text-primary flex items-center justify-center">
+<span class="material-symbols-outlined">health_and_safety</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">EPI &amp; Kits d'Urgence</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Équipements de protection de niveau 3 pour les agents opérationnels et kits de confinement rapide en cas d'épandage accidentel.
+            </p>
+<ul class="flex flex-col gap-2 pt-2">
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+<span class="">Combinaisons étanches antistatiques et masques FFP3</span>
+</li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+<span class="">Absorbants minéraux et neutralisants liquides</span>
+</li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+<span class="">Kits de décontamination biologique d'urgence</span>
+</li>
+</ul>
+</div>
+<div class="pt-6">
+<span class="font-label-md text-label-md text-primary font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              Normes d'intervention →
+            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Engagement de Maintenance & Contrôle Régulier -->
+<section class="w-full py-16 md:py-20 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="bg-inverse-surface text-inverse-on-surface rounded-3xl p-8 md:p-14 overflow-hidden relative">
+<!-- Subtle background glow -->
+<div class="absolute -right-24 -top-24 w-96 h-96 bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container text-on-primary font-label-caps text-label-caps uppercase tracking-wider w-fit">
+<span class="material-symbols-outlined text-sm">security</span>
+<span class="">Qualité &amp; Rigueur Réglementaire</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl font-extrabold tracking-tight text-white leading-tight">
+              Maintenance Préventive &amp; Contrôle Périodique des Rejets
+            </h2>
+<p class="font-body-lg text-body-lg text-surface-variant/90 max-w-xl">
+              Le maintien d'un niveau d'émissions rigoureusement conforme exige une vigilance constante. Nos installations font l'objet d'un plan de révision systématique et d'audits menés par des laboratoires tiers accrédités.
+            </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-xl bg-primary-container/40 text-primary-fixed flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-xl">biotech</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg font-bold text-white">Prélèvements Trimestriels</h4>
+<p class="font-body-sm text-body-sm text-surface-variant/80">Analyses isocinétiques des rejets à l'échappement par des techniciens indépendants.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-xl bg-primary-container/40 text-primary-fixed flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-xl">build_circle</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg font-bold text-white">Entretien Réfractaire</h4>
+<p class="font-body-sm text-body-sm text-surface-variant/80">Régénération périodique des bétons réfractaires et des buses de pulvérisation.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-xl bg-primary-container/40 text-primary-fixed flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-xl">receipt_long</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg font-bold text-white">Registre de Traçabilité</h4>
+<p class="font-body-sm text-body-sm text-surface-variant/80">Archivage exhaustif des Bordereaux de Suivi de Déchets (BSD) transmis aux autorités.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-xl bg-primary-container/40 text-primary-fixed flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-xl">nature_people</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg font-bold text-white">Agrément CIAPOL Actif</h4>
+<p class="font-body-sm text-body-sm text-surface-variant/80">Certificat de conformité environnementale renouvelé annuellement avec inspection.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 bg-surface-container-highest/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 flex flex-col gap-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">published_with_changes</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-white">Plan de Continuité</h4>
+<span class="font-label-sm text-body-sm text-surface-variant">Disponibilité garantie &gt; 96%</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-surface-variant leading-relaxed">
+              En cas d'arrêt programmé de maintenance, notre dispositif de stockage tampon sécurisé et réfrigéré permet de préserver vos flux de DASRI sans aucune rupture de service ni risque sanitaire.
+            </p>
+<div class="p-4 rounded-xl bg-surface-container-lowest/10 flex items-center justify-between">
+<span class="font-label-md text-label-md text-white">Dernier audit de conformité</span>
+<span class="font-label-md text-label-md text-tertiary-fixed font-bold">Validé sans réserve</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="w-full py-16 md:py-24 bg-surface">
+<div class="max-w-5xl mx-auto px-margin text-center">
+<div class="p-8 md:p-14 rounded-3xl bg-surface-container-high/60 flex flex-col items-center">
+<div class="w-16 h-16 rounded-2xl bg-primary-container text-on-primary flex items-center justify-center mb-6 shadow-sm">
+<span class="material-symbols-outlined text-3xl">contact_support</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight max-w-2xl leading-tight">
+          Vous souhaitez vérifier l'adéquation de nos équipements avec vos types de déchets ?
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-4 max-w-xl">
+          Nos ingénieurs environnementaux analysent la composition de vos gisements et réalisent une étude de compatibilité thermique personnalisée.
+        </p>
+<div class="flex flex-col sm:flex-row items-center gap-4 mt-8">
+<a class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary transition-all" data-path="contact" href="#">
+<span class="">Contactez nos experts techniques</span>
+<span class="material-symbols-outlined text-lg">call</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-surface-container-lowest text-on-surface font-label-lg text-label-lg hover:bg-surface-dim transition-colors shadow-sm" data-path="demander-un-devis" href="#">
+<span class="">Demander un diagnostic gratuit</span>
+<span class="material-symbols-outlined text-lg">assessment</span>
+</a>
+</div>
+<div class="flex items-center gap-6 mt-8 text-on-surface-variant font-label-md text-label-md">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-base">verified</span>
+            Réponse sous 24h ouvrées
+          </span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-base">support_agent</span>
+            Visite sur site possible
+          </span>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest text-on-surface shadow-[0_-1px_12px_rgba(0,0,0,0.03)]"><div class="max-w-7xl mx-auto px-margin pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-xl pb-space-xl"><div class="lg:col-span-4 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center"><span class="material-symbols-outlined text-2xl">eco</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight leading-tight">Fontaine Verte</span><span class="font-label-caps text-label-caps text-primary font-bold tracking-wider uppercase">Notre souci, un monde sain !</span></div></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Opérateur certifié d'ingénierie environnementale en Côte d'Ivoire. Collecte spécialisée, transport sécurisé et traitement agréé des déchets industriels et biomédicaux (DASRI).</p><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-primary text-xl">verified_user</span><span class="font-label-md text-label-md text-on-surface font-semibold">Agréé Ministère de l'Environnement</span></div></div><div class="lg:col-span-3 flex flex-col gap-space-md"><span class="font-headline-sm text-headline-sm text-on-surface font-bold">Liens rapides</span><nav class="flex flex-col gap-space-xs" data-active-classes="text-primary font-bold"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="accueil" href="#">Accueil</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="a-propos" href="#">À propos</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="nos-services" href="#">Nos services</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="equipements" href="#">Équipements</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="#">Contact</a></nav></div><div class="lg:col-span-5 flex flex-col gap-space-md"><span class="font-headline-sm text-headline-sm text-on-surface font-bold">Siège social &amp; Contact</span><div class="flex flex-col gap-space-sm text-on-surface-variant font-body-md text-body-md"><div class="flex items-start gap-space-sm"><span class="material-symbols-outlined text-primary text-xl mt-0.5">location_on</span><span class="">Abidjan, Yopougon, Gnandobité, Belle Air du Banco, lot 30, îlot 6</span></div><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-xl">markunread_mailbox</span><span class="">11 BP 2497 Abidjan 11</span></div><div class="flex items-start gap-space-sm"><span class="material-symbols-outlined text-primary text-xl mt-0.5">call</span><div class="flex flex-col gap-1"><a class="hover:text-primary transition-colors" href="tel:+2250757947440">+225 07 57 94 74 40</a><a class="hover:text-primary transition-colors" href="tel:+2250757176987">+225 07 57 17 69 87</a><a class="hover:text-primary transition-colors" href="tel:+2250140585858">+225 01 40 58 58 58</a></div></div><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-xl">mail</span><a class="hover:text-primary transition-colors" href="mailto:contact@fontaineverte.ci">contact@fontaineverte.ci</a></div></div></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md bg-surface-container-low px-space-md py-space-sm rounded-xl"><div class="flex flex-col sm:flex-row items-center gap-space-sm text-center sm:text-left"><span class="font-body-sm text-body-sm text-on-surface-variant">© 2024 Fontaine Verte. Tous droits réservés.</span><span class="hidden sm:inline text-outline-variant">•</span><span class="font-label-caps text-label-caps text-primary font-bold uppercase tracking-wider">Notre souci, un monde sain !</span></div><div class="flex items-center gap-space-sm"><a aria-label="Certifications" class="w-9 h-9 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg">workspace_premium</span></a><a aria-label="Rapports" class="w-9 h-9 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg">description</span></a><a aria-label="Partager" class="w-9 h-9 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg">share</span></a></div></div></div></footer>
+
+</body></html>

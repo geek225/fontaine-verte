@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Fontaine Verte - Gestion et traitement des déchets</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed-dim": "#4ae176", "secondary-fixed-dim": "#94ccff", "on-tertiary-container": "#d5ffd5", "on-primary-fixed": "#00210a", "inverse-on-surface": "#eef0ff", "on-surface": "#131b2e", "surface-bright": "#faf8ff", "on-primary-container": "#d3ffd5", "on-tertiary": "#ffffff", "error": "#ba1a1a", "on-surface-variant": "#3f493f", "on-tertiary-fixed-variant": "#005321", "tertiary-container": "#008138", "error-container": "#ffdad6", "on-background": "#131b2e", "on-tertiary-fixed": "#002109", "surface-variant": "#dae2fd", "on-primary": "#ffffff", "on-error-container": "#93000a", "inverse-surface": "#283044", "secondary-container": "#7bc2ff", "surface-container": "#eaedff", "secondary": "#006399", "primary-container": "#15803d", "surface": "#faf8ff", "on-secondary-container": "#004f7b", "secondary-fixed": "#cde5ff", "inverse-primary": "#79db8d", "surface-container-highest": "#dae2fd", "surface-container-high": "#e2e7ff", "primary-fixed-dim": "#79db8d", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#001d32", "on-secondary": "#ffffff", "surface-tint": "#006d30", "on-primary-fixed-variant": "#005323", "surface-container-low": "#f2f3ff", "tertiary-fixed": "#6bff8f", "background": "#faf8ff", "outline": "#6f7a6e", "primary": "#00652c", "surface-dim": "#d2d9f4", "tertiary": "#00652b", "on-secondary-fixed-variant": "#004b74", "outline-variant": "#becabc", "primary-fixed": "#95f8a7", "on-error": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-mobile": "1rem", "space-lg": "1.5rem", "margin-mobile": "1.25rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "space-md": "1rem", "margin": "2rem", "gutter": "1.5rem" }, "fontFamily": { "body-sm": ["Manrope"], "body-md": ["Manrope"], "headline-xl": ["Manrope"], "label-md": ["Manrope"], "headline-md": ["Manrope"], "display-hero-mobile": ["Manrope"], "label-lg": ["Manrope"], "headline-xl-mobile": ["Manrope"], "headline-lg": ["Manrope"], "display-hero": ["Manrope"], "label-caps": ["Manrope"], "headline-sm": ["Manrope"], "body-lg": ["Manrope"] }, "fontSize": { "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "800" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-margin flex items-center justify-between gap-space-md"><div class="flex-1 flex justify-start"><a class="flex items-center gap-space-sm group text-left" data-path="accueil" href="#"><div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center transition-transform group-hover:scale-105"><span class="material-symbols-outlined text-2xl">eco</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight leading-tight group-hover:text-primary transition-colors">Fontaine Verte</span><span class="font-label-caps text-label-caps text-primary font-bold tracking-wider uppercase">Notre souci, un monde sain !</span></div></a></div><nav class="hidden lg:flex items-center justify-center gap-space-xs p-1 rounded-full bg-surface-container-low/60 flex-shrink-0" data-active-classes="bg-surface-container-high text-primary font-bold rounded-full"><a class="px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="accueil" href="#">Accueil</a><a class="px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="a-propos" href="#">À propos</a><a class="px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="nos-services" href="#">Nos services</a><a class="px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="equipements" href="#">Équipements</a><a class="px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex-1 flex items-center justify-end gap-space-md"><a class="inline-flex items-center justify-center gap-space-xs px-6 py-2.5 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg transition-all duration-200 hover:bg-primary shadow-[0_4px_16px_-2px_rgba(21,128,61,0.25)] hover:shadow-[0_8px_20px_-2px_rgba(21,128,61,0.35)] active:scale-95" data-path="demander-un-devis" href="#"><span>Demander un devis</span><span class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-0.5">arrow_forward</span></a><div class="hidden sm:flex items-center pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-fixed" src="https://lh3.googleusercontent.com/aida/AEtjO1VehV3jSECZEVpcCNdUIxJcXg09nSsgrIxDe7tUPnKoM7c0JiBLZxJpF5et-XMGZ4a0JHphEF_YzUwu9KioLO-RHq7NGDMJuUx4tEZlmtVkeijBkE2yZHMhLDEvaNI_L911LLfUugEuDIe6N5tazZiokKTIAdm7sWRfpfcU_bbBgdF7ZyY-8unnugzSoUPvNL1zussV5VgENY50jnsM7zjLAZRS7_W8H_d8usFpTTIc6OX6Gzd8jhEDUkT79jvyPM8pwA_Wi16vXw"/></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Hero Section -->
+<section class="relative w-full bg-surface-container-low overflow-hidden py-16 lg:py-24">
+<div class="absolute inset-0 pointer-events-none opacity-40">
+<div class="absolute -top-32 right-12 w-96 h-96 rounded-full bg-primary-fixed/30 blur-3xl"></div>
+<div class="absolute bottom-0 left-1/4 w-80 h-80 rounded-full bg-secondary-fixed/40 blur-3xl"></div>
+</div>
+<div class="relative max-w-7xl mx-auto px-margin">
+<div class="flex flex-col max-w-3xl">
+<div class="flex items-center gap-space-xs mb-4">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-primary-container text-on-primary">
+<span class="material-symbols-outlined text-sm">support_agent</span>
+</span>
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-widest">
+            Service Clientèle &amp; Pôle QHSE • Abidjan
+          </span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight mb-6">
+          Contactez nos experts en ingénierie environnementale
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+          Une question sur la gestion de vos déchets industriels ou DASRI ? Besoin d'un devis certifié ou d'un diagnostic réglementaire sur site ? Nos équipes d'intervention opèrent 24h/24 et 7j/7 sur tout le district d'Abidjan et les pôles industriels ivoiriens.
+        </p>
+<!-- Trust Badges -->
+<div class="flex flex-wrap items-center gap-3">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest shadow-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-lg">bolt</span>
+<span class="font-label-md text-label-md font-semibold">Réponse sous 24h ouvrées</span>
+</div>
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest shadow-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-lg">verified</span>
+<span class="font-label-md text-label-md font-semibold">Opérateur agréé CIAPOL &amp; Ministère</span>
+</div>
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest shadow-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-lg">groups</span>
+<span class="font-label-md text-label-md font-semibold">Équipe d'ingénieurs dédiée</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Interaction Area: Form + Contact Cards -->
+<section class="w-full bg-background py-16 lg:py-24">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+<!-- Form Column (Left: 7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-2xl p-8 sm:p-10 shadow-sm relative">
+<div class="flex items-center justify-between mb-8">
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-widest block mb-1">
+                Formulaire Officiel
+              </span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+                Transmettez votre cahier des charges
+              </h2>
+</div>
+<div class="hidden sm:flex w-12 h-12 rounded-xl bg-surface-container-high text-primary items-center justify-center">
+<span class="material-symbols-outlined text-2xl">description</span>
+</div>
+</div>
+<!-- Reason Selector Tabs -->
+<div class="mb-8">
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">
+              Motif de votre sollicitation <span class="text-primary">*</span>
+</label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2" id="reason-tab-group">
+<button class="reason-tab active-reason px-3 py-2.5 rounded-lg text-center font-label-md text-label-md transition-all duration-150 bg-primary-container text-on-primary font-bold shadow-sm" data-reason="devis" type="button">
+                Devis rapide
+              </button>
+<button class="reason-tab px-3 py-2.5 rounded-lg text-center font-label-md text-label-md transition-all duration-150 bg-surface-container text-on-surface hover:bg-surface-container-high font-medium" data-reason="diagnostic" type="button">
+                Diagnostic audit
+              </button>
+<button class="reason-tab px-3 py-2.5 rounded-lg text-center font-label-md text-label-md transition-all duration-150 bg-surface-container text-on-surface hover:bg-surface-container-high font-medium" data-reason="dasri" type="button">
+                Prise DASRI
+              </button>
+<button class="reason-tab px-3 py-2.5 rounded-lg text-center font-label-md text-label-md transition-all duration-150 bg-surface-container text-on-surface hover:bg-surface-container-high font-medium" data-reason="autre" type="button">
+                Autre besoin
+              </button>
+</div>
+<input id="selected-reason" name="selected-reason" type="hidden" value="devis"/>
+</div>
+<!-- Form Fields -->
+<form class="space-y-6" id="contact-form" onsubmit="event.preventDefault(); handleFormSubmit();">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1.5" for="full-name">
+                  Nom &amp; Prénom <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-11 px-3.5 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all" id="full-name" placeholder="Ex. Koffi N'Guessan" required="" type="text"/>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1.5" for="company-name">
+                  Entreprise / Établissement <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-11 px-3.5 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all" id="company-name" placeholder="Ex. Groupe Clinique du Sud, S.A." required="" type="text"/>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1.5" for="email">
+                  Adresse e-mail professionnelle <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-11 px-3.5 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all" id="email" placeholder="direction@entreprise.ci" required="" type="email"/>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1.5" for="phone">
+                  Téléphone direct (+225) <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-11 px-3.5 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all" id="phone" placeholder="+225 07 00 00 00 00" required="" type="tel"/>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1.5" for="sector">
+                  Secteur d'activité <span class="text-error">*</span>
+</label>
+<select class="w-full h-11 px-3.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all cursor-pointer" id="sector" required="">
+<option disabled="" selected="" value="">Sélectionnez un secteur</option>
+<option value="sante">Santé, Cliniques &amp; Hôpitaux (DASRI)</option>
+<option value="industrie">Industrie lourde, Chimie &amp; BTP</option>
+<option value="agroalimentaire">Agro-industrie &amp; Transformation</option>
+<option value="mines">Mines, Pétrole &amp; Énergie</option>
+<option value="ports">Logistique portuaire &amp; Douanes</option>
+<option value="autre">Autre structure privée ou publique</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1.5" for="subject">
+                  Objet de la demande <span class="text-error">*</span>
+</label>
+<input class="w-full h-11 px-3.5 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all" id="subject" placeholder="Ex. Enlèvement bi-mensuel DASRI" required="" type="text"/>
+</div>
+</div>
+<!-- Waste Typology Tags -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-2">
+                Typologie de déchets concernés
+              </label>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<input class="w-4 h-4 rounded text-primary-container focus:ring-primary accent-primary" name="waste-type" type="checkbox" value="dasri"/>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">DASRI infectieux</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<input class="w-4 h-4 rounded text-primary-container focus:ring-primary accent-primary" name="waste-type" type="checkbox" value="chimique"/>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Chimiques &amp; Solvants</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<input class="w-4 h-4 rounded text-primary-container focus:ring-primary accent-primary" name="waste-type" type="checkbox" value="perimes"/>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Produits périmés</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<input class="w-4 h-4 rounded text-primary-container focus:ring-primary accent-primary" name="waste-type" type="checkbox" value="hydrocarbures"/>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Boues &amp; Hydrocarbures</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<input class="w-4 h-4 rounded text-primary-container focus:ring-primary accent-primary" name="waste-type" type="checkbox" value="disb"/>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Déchets BTP &amp; DISB</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<input class="w-4 h-4 rounded text-primary-container focus:ring-primary accent-primary" name="waste-type" type="checkbox" value="autre"/>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Autre / À classifier</span>
+</label>
+</div>
+</div>
+<!-- Message Area -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1.5" for="message">
+                Détails complémentaires ou tonnage estimé <span class="text-error">*</span>
+</label>
+<textarea class="w-full p-3.5 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all" id="message" placeholder="Précisez les volumes approximatifs, la fréquence de rotation souhaitée, les contraintes de site ou l'urgence opérationnelle..." required="" rows="4"></textarea>
+</div>
+<!-- QHSE Onsite checkbox -->
+<div class="p-4 rounded-xl bg-surface-container-low/80 flex items-start gap-3">
+<input class="mt-1 w-4 h-4 rounded text-primary accent-primary" id="onsite-audit" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface cursor-pointer select-none" for="onsite-audit">
+<strong class="font-semibold text-primary">Je souhaite un passage sur site d'un ingénieur QHSE</strong> pour une caractérisation préalable des gisements de déchets et la remise d'un plan d'enlèvement certifié.
+              </label>
+</div>
+<!-- Submit action -->
+<div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-8 py-3.5 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg transition-all duration-200 hover:bg-primary shadow-md active:scale-95 group" type="submit">
+<span>Envoyer ma demande</span>
+<span class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+<div class="flex items-center gap-2 text-on-surface-variant text-center sm:text-left">
+<span class="material-symbols-outlined text-base text-primary">lock</span>
+<span class="font-body-sm text-body-sm">
+                  Données confidentielles traitées selon les normes CIAPOL en vigueur.
+                </span>
+</div>
+</div>
+<div class="hidden p-4 rounded-xl bg-on-tertiary-container/30 text-primary font-body-sm text-body-sm" id="form-feedback">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xl">check_circle</span>
+<span>Votre demande a été transmise au pôle d'ingénierie. Un référent technique vous recontactera sous 24h ouvrées.</span>
+</div>
+</div>
+</form>
+</div>
+<!-- Right Column: Coordinates & Emergency Hotlines (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<!-- Urgent Protocol Card (Highlighted) -->
+<div class="rounded-2xl p-6 sm:p-8 bg-error-container/40 text-on-surface shadow-sm relative overflow-hidden">
+<div class="flex items-center gap-3 mb-3">
+<span class="flex items-center justify-center w-10 h-10 rounded-full bg-error text-on-error">
+<span class="material-symbols-outlined text-xl">emergency</span>
+</span>
+<div>
+<span class="font-label-caps text-label-caps text-error uppercase font-bold tracking-widest block">
+                  Permanence Sécurisée
+                </span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">
+                  Urgences Sanitaires &amp; DASRI
+                </h3>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+              Protocole d'intervention prioritaire sous <strong>24h à 48h</strong> pour les cliniques, plateformes portuaires, industries chimiques et dépôts à risque de contamination.
+            </p>
+<div class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-lowest">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-error text-2xl">phone_in_talk</span>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase font-bold">Ligne d'astreinte 24/7</span>
+<a class="font-headline-sm text-headline-sm font-bold text-error hover:underline" href="tel:+2250140585858">
+                    +225 01 40 58 58 58
+                  </a>
+</div>
+</div>
+<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-error/10 text-error font-label-caps text-label-caps font-bold">
+                24/7
+              </span>
+</div>
+</div>
+<!-- Official Fontaine Verte Headquarters Card -->
+<div class="rounded-2xl p-6 sm:p-8 bg-surface-container-lowest text-on-surface shadow-sm">
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-widest block mb-1">
+              Siège Social &amp; Centre Administratif
+            </span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-6">
+              Coordonnées Officielles
+            </h3>
+<div class="space-y-5 font-body-md text-body-md">
+<!-- Physical address -->
+<div class="flex items-start gap-3.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-xl">location_on</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant block mb-0.5">Base Opérationnelle</span>
+<p class="font-semibold text-on-surface">
+                    Abidjan, Yopougon, Gnandobité, Belle Air du Banco, lot 30, îlot 6
+                  </p>
+</div>
+</div>
+<!-- Mailbox -->
+<div class="flex items-start gap-3.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-xl">markunread_mailbox</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant block mb-0.5">Boîte Postale</span>
+<p class="font-semibold text-on-surface">11 BP 2497 Abidjan 11</p>
+</div>
+</div>
+<!-- Direct Lines -->
+<div class="flex items-start gap-3.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-xl">call</span>
+</div>
+<div class="w-full">
+<span class="font-label-md text-label-md text-on-surface-variant block mb-1">Lignes téléphoniques</span>
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Standard commercial &amp; Devis :</span>
+<a class="font-semibold text-primary hover:underline text-body-sm" href="tel:+2250757947440">+225 07 57 94 74 40</a>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pôle Technique &amp; Exploitation :</span>
+<a class="font-semibold text-primary hover:underline text-body-sm" href="tel:+2250757176987">+225 07 57 17 69 87</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Email -->
+<div class="flex items-start gap-3.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-xl">mail</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant block mb-0.5">Courriel Sécurisé</span>
+<a class="font-semibold text-primary hover:underline" href="mailto:contact@fontaineverte.ci">
+                    contact@fontaineverte.ci
+                  </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Operating Hours Card -->
+<div class="rounded-2xl p-6 sm:p-8 bg-surface-container text-on-surface shadow-sm">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary text-2xl">schedule</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">
+                Horaires d'accessibilité
+              </h3>
+</div>
+<div class="space-y-3">
+<div class="p-3.5 rounded-xl bg-surface-container-lowest">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-md text-label-md font-bold text-on-surface">Bureaux administratifs</span>
+<span class="font-label-caps text-label-caps text-primary font-bold uppercase">Ouvert</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant space-y-0.5">
+<p>Lundi – Vendredi : <span class="font-semibold text-on-surface">07h30 – 17h30</span></p>
+<p>Samedi : <span class="font-semibold text-on-surface">08h00 – 12h30</span></p>
+</div>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-container-lowest">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-md text-label-md font-bold text-on-surface">Centre de Traitement &amp; Incinérateur</span>
+<span class="inline-flex items-center gap-1 font-label-caps text-label-caps text-primary font-bold uppercase">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span> Continu
+                  </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Flotte d'enlèvement et unité thermique : <strong class="text-on-surface">Opérationnel 24h/24, 7j/7</strong> sans interruption.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Geographic Location & Facility Map Section -->
+<section class="w-full bg-surface-container-low py-16 lg:py-24 overflow-hidden">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-widest block mb-2">
+            Infrastructures Industrielles Agréées
+          </span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">
+            Notre Base Opérationnelle &amp; Centre de Traitement
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-2">
+            Idéalement implanté à Yopougon, en bordure du corridor autoroutier du Banco, facilitant l'accès fluide pour les convois sécurisés et le transit rapide depuis les zones industrielles de Vridi, Yopougon et Koumassi.
+          </p>
+</div>
+<a class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-surface-container-lowest text-primary font-label-lg text-label-lg shadow-sm hover:bg-primary-container hover:text-on-primary transition-all flex-shrink-0 self-start md:self-auto" href="https://maps.google.com/?q=Yopougon,Abidjan" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-lg">navigation</span>
+<span>Itinéraire &amp; Localisation GPS</span>
+</a>
+</div>
+<!-- Map Display Container -->
+<div class="relative w-full rounded-2xl overflow-hidden shadow-lg bg-surface-container-high">
+<!-- Interactive Styled Map Element -->
+<div class="w-full h-[460px] bg-cover bg-center relative" data-alt="Satellite and architectural aerial perspective of a modern eco-industrial waste treatment facility in Yopougon Abidjan Cote d'Ivoire with green trucks, thermal unit chimney, perimeter road access, and clean tropical ambient lighting" data-location="Yopougon, Abidjan, Côte d'Ivoire" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCJcIdvDE-sxNcYOwWqJuKBiRVxPcKd0f54SfulE_kA_84ufM64-SH7X396hMzzpxllHGo2_eGSfjCglqqbN3t9iDMbjWMwoX7HKOfsSC64tjwJMWrc4n3ZKodi_d92cmPs_4jvRi7Fxkv-RzunzC7klcYBA01a7iBZm5vYltSApTVot4-vGcLfe_KO7jiEEXJgwFI1FxSPyT7WpQcuzDI_HSRVOU__JSsx7rF6AYN-7yksF-GLY1vR')">
+<!-- Overlaid Map Card / Floating Legend -->
+<div class="absolute top-6 left-6 right-6 sm:right-auto sm:max-w-md bg-surface-container-lowest/95 backdrop-blur-md rounded-xl p-6 shadow-xl">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-9 h-9 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">factory</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-primary font-bold uppercase tracking-wider">Site Haute Sécurité</span>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Base Sécurisée Fontaine Verte</h4>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+              Plateforme technique de pesée certifiée, hangars de tri des conditionnements DASRI, double chambre d'incinération à 1 200°C et laboratoire de traçabilité.
+            </p>
+<div class="grid grid-cols-2 gap-2 text-on-surface font-body-sm text-body-sm pt-2 border-t border-surface-container-high/60">
+<div>
+<span class="font-label-caps text-label-caps text-outline block">Coordonnées GPS</span>
+<span class="font-mono font-semibold text-xs text-on-surface">5.3481° N, 4.0734° W</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-outline block">Axe Routier Principal</span>
+<span class="font-semibold text-xs text-on-surface">Autoroute du Nord / Banco</span>
+</div>
+</div>
+</div>
+<!-- Pulsing Map Pin Indicator Overlay -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center pointer-events-none">
+<span class="relative flex h-10 w-10">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-10 w-10 bg-primary items-center justify-center text-on-primary shadow-lg">
+<span class="material-symbols-outlined text-xl">location_city</span>
+</span>
+</span>
+<div class="mt-2 px-3 py-1 bg-on-surface text-surface text-xs font-bold rounded shadow-md tracking-wider">
+              FONTAINE VERTE • HQ
+            </div>
+</div>
+</div>
+<!-- Metric Bar Beneath Map -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 bg-surface-container-lowest">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">local_shipping</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">15+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Véhicules d'intervention géolocalisés</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">science</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">1 200°C</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Neutralisation thermique continue</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">shield_with_heart</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">100%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Conformité réglementaire CIAPOL</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">timer</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">&lt; 45 min</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Temps moyen de ralliement Abidjan</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- B2B FAQ Section (Prise de contact) -->
+<section class="w-full bg-background py-16 lg:py-24">
+<div class="max-w-4xl mx-auto px-margin">
+<div class="text-center mb-14">
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-widest block mb-2">
+          Transparence Opérationnelle
+        </span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">
+          Questions fréquentes de nos partenaires B2B
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-xl mx-auto">
+          Ce que les directeurs de cliniques, responsables QHSE et industriels nous demandent avant tout engagement contractuel.
+        </p>
+</div>
+<div class="space-y-4" id="faq-accordion">
+<!-- FAQ 1 -->
+<div class="rounded-xl bg-surface-container-lowest p-6 shadow-sm cursor-pointer transition-all hover:shadow-md faq-item" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-full bg-primary-container/10 text-primary flex items-center justify-center font-bold text-sm flex-shrink-0">
+                01
+              </span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold text-left">
+                Quels sont les délais d'intervention pour un premier enlèvement ?
+              </h3>
+</div>
+<span class="material-symbols-outlined text-primary transition-transform duration-300 faq-icon">expand_more</span>
+</div>
+<div class="faq-content mt-4 pl-11 text-on-surface-variant font-body-md text-body-md">
+            Pour un premier enlèvement conventionnel, nos équipes effectuent un diagnostic de caractérisation sous <strong>24 à 48 heures ouvrées</strong>, suivi du positionnement des fûts ou bacs sécurisés. En cas d'urgence sanitaire critique (saturation d'un dépôt DASRI ou déversement accidentel), notre brigade d'astreinte est activée immédiatement via notre hotline 24/7.
+          </div>
+</div>
+<!-- FAQ 2 -->
+<div class="rounded-xl bg-surface-container-lowest p-6 shadow-sm cursor-pointer transition-all hover:shadow-md faq-item" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-full bg-primary-container/10 text-primary flex items-center justify-center font-bold text-sm flex-shrink-0">
+                02
+              </span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold text-left">
+                Délivrez-vous des certificats officiels de destruction pour la fiscalité et les douanes ?
+              </h3>
+</div>
+<span class="material-symbols-outlined text-primary transition-transform duration-300 faq-icon">expand_more</span>
+</div>
+<div class="faq-content mt-4 pl-11 text-on-surface-variant font-body-md text-body-md">
+<strong>Oui, systématiquement.</strong> À l'issue de chaque opération de destruction thermique ou d'enfouissement contrôlé, nous établissons un <em>Bordereau de Suivi des Déchets (BSD)</em> et un Certificat Officiel de Destruction Contresigné, visé par les agents assermentés. Ces pièces comptables et juridiques attestent la sortie d'inventaire auprès des administrations fiscales et douanières ivoiriennes.
+          </div>
+</div>
+<!-- FAQ 3 -->
+<div class="rounded-xl bg-surface-container-lowest p-6 shadow-sm cursor-pointer transition-all hover:shadow-md faq-item" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-full bg-primary-container/10 text-primary flex items-center justify-center font-bold text-sm flex-shrink-0">
+                03
+              </span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold text-left">
+                Comment se déroule le diagnostic préalable sur site ?
+              </h3>
+</div>
+<span class="material-symbols-outlined text-primary transition-transform duration-300 faq-icon">expand_more</span>
+</div>
+<div class="faq-content mt-4 pl-11 text-on-surface-variant font-body-md text-body-md">
+            Un ingénieur QHSE qualifié se déplace sur vos installations afin d'inventorier la nature des flux, de vérifier les aires de stockage temporaire et de dimensionner les contenants requis (bacs étanches jaunes, fûts homologués UN). Ce diagnostic préliminaire donne lieu à une proposition tarifaire forfaitaire ou au tonnage, sans interruption de votre activité industrielle.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Banner -->
+<section class="w-full bg-primary-container text-on-primary py-16 relative overflow-hidden">
+<div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-primary-fixed/20 blur-2xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-margin relative z-10">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+<div class="max-w-2xl text-center lg:text-left">
+<span class="font-label-caps text-label-caps text-on-primary-container uppercase font-bold tracking-widest block mb-2">
+            Disponibilité Immédiate • Conseil Gratuit
+          </span>
+<h2 class="font-headline-lg text-headline-lg font-bold tracking-tight mb-3">
+            Un déchet complexe à neutraliser ? Échangeons directement par téléphone.
+          </h2>
+<p class="font-body-md text-body-md text-on-primary-container max-w-xl">
+            Nos directeurs de mission vous orientent sur la réglementation en vigueur, les emballages agréés et les créneaux d'enlèvement adaptés à vos cadences.
+          </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-4 flex-shrink-0">
+<a class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-surface-container-lowest text-primary hover:bg-surface-bright font-label-lg text-label-lg font-bold shadow-lg transition-transform active:scale-95 group" href="tel:+2250757947440">
+<span class="material-symbols-outlined text-2xl text-primary transition-transform group-hover:rotate-12">phone_in_talk</span>
+<span>+225 07 57 94 74 40</span>
+</a>
+<a class="inline-flex items-center gap-2 px-6 py-4 rounded-full bg-tertiary-container/30 text-on-primary hover:bg-tertiary-container/50 font-label-lg text-label-lg font-semibold transition-colors" href="#contact-form">
+<span>Remplir le formulaire</span>
+<span class="material-symbols-outlined text-lg">arrow_downward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Tab selector for contact reason
+  const reasonTabs = document.querySelectorAll('.reason-tab');
+  const selectedReasonInput = document.getElementById('selected-reason');
+
+  reasonTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      reasonTabs.forEach(t => {
+        t.classList.remove('bg-primary-container', 'text-on-primary', 'font-bold', 'shadow-sm');
+        t.classList.add('bg-surface-container', 'text-on-surface', 'hover:bg-surface-container-high', 'font-medium');
+      });
+      tab.classList.remove('bg-surface-container', 'text-on-surface', 'hover:bg-surface-container-high', 'font-medium');
+      tab.classList.add('bg-primary-container', 'text-on-primary', 'font-bold', 'shadow-sm');
+      if (selectedReasonInput) {
+        selectedReasonInput.value = tab.getAttribute('data-reason');
+      }
+    });
+  });
+
+  // Contact form submission mock
+  function handleFormSubmit() {
+    const feedback = document.getElementById('form-feedback');
+    if (feedback) {
+      feedback.classList.remove('hidden');
+      feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  }
+
+  // FAQ Accordion micro-interaction
+  function toggleFaq(item) {
+    const content = item.querySelector('.faq-content');
+    const icon = item.querySelector('.faq-icon');
+    
+    if (content.style.display === 'none') {
+      content.style.display = 'block';
+      icon.style.transform = 'rotate(180deg)';
+    } else {
+      content.style.display = 'none';
+      icon.style.transform = 'rotate(0deg)';
+    }
+  }
+</script></main><footer class="w-full bg-surface-container-lowest text-on-surface shadow-[0_-1px_12px_rgba(0,0,0,0.03)]"><div class="max-w-7xl mx-auto px-margin pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-xl pb-space-xl"><div class="lg:col-span-4 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center"><span class="material-symbols-outlined text-2xl">eco</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight leading-tight">Fontaine Verte</span><span class="font-label-caps text-label-caps text-primary font-bold tracking-wider uppercase">Notre souci, un monde sain !</span></div></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Opérateur certifié d'ingénierie environnementale en Côte d'Ivoire. Collecte spécialisée, transport sécurisé et traitement agréé des déchets industriels et biomédicaux (DASRI).</p><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-primary text-xl">verified_user</span><span class="font-label-md text-label-md text-on-surface font-semibold">Agréé Ministère de l'Environnement</span></div></div><div class="lg:col-span-3 flex flex-col gap-space-md"><span class="font-headline-sm text-headline-sm text-on-surface font-bold">Liens rapides</span><nav class="flex flex-col gap-space-xs" data-active-classes="text-primary font-bold"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="accueil" href="#">Accueil</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="a-propos" href="#">À propos</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="nos-services" href="#">Nos services</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="equipements" href="#">Équipements</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="#">Contact</a></nav></div><div class="lg:col-span-5 flex flex-col gap-space-md"><span class="font-headline-sm text-headline-sm text-on-surface font-bold">Siège social &amp; Contact</span><div class="flex flex-col gap-space-sm text-on-surface-variant font-body-md text-body-md"><div class="flex items-start gap-space-sm"><span class="material-symbols-outlined text-primary text-xl mt-0.5">location_on</span><span>Abidjan, Yopougon, Gnandobité, Belle Air du Banco, lot 30, îlot 6</span></div><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-xl">markunread_mailbox</span><span>11 BP 2497 Abidjan 11</span></div><div class="flex items-start gap-space-sm"><span class="material-symbols-outlined text-primary text-xl mt-0.5">call</span><div class="flex flex-col gap-1"><a class="hover:text-primary transition-colors" href="tel:+2250757947440">+225 07 57 94 74 40</a><a class="hover:text-primary transition-colors" href="tel:+2250757176987">+225 07 57 17 69 87</a><a class="hover:text-primary transition-colors" href="tel:+2250140585858">+225 01 40 58 58 58</a></div></div><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-xl">mail</span><a class="hover:text-primary transition-colors" href="mailto:contact@fontaineverte.ci">contact@fontaineverte.ci</a></div></div></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md bg-surface-container-low px-space-md py-space-sm rounded-xl"><div class="flex flex-col sm:flex-row items-center gap-space-sm text-center sm:text-left"><span class="font-body-sm text-body-sm text-on-surface-variant">© 2024 Fontaine Verte. Tous droits réservés.</span><span class="hidden sm:inline text-outline-variant">•</span><span class="font-label-caps text-label-caps text-primary font-bold uppercase tracking-wider">Notre souci, un monde sain !</span></div><div class="flex items-center gap-space-sm"><a aria-label="Certifications" class="w-9 h-9 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg">workspace_premium</span></a><a aria-label="Rapports" class="w-9 h-9 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg">description</span></a><a aria-label="Partager" class="w-9 h-9 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg">share</span></a></div></div></div></footer></body></html>
