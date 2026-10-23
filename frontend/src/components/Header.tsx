@@ -25,7 +25,7 @@ export default function Header() {
       href: "/services",
       label: "Nos services",
       description: "Incinération thermique, DASRI et dépollution",
-      icon: "miscellaneous_services",
+      icon: "cleaning_services",
     },
     {
       href: "/equipements",
@@ -177,6 +177,7 @@ export default function Header() {
           aria-modal="true"
           aria-label="Menu principal de navigation"
           className="fixed top-16 left-0 right-0 max-h-[calc(100vh-4rem)] overflow-y-auto bg-[#faf8ff] border-b border-[#dae2fd] shadow-2xl z-50 lg:hidden animate-in slide-in-from-top-2 duration-200"
+          style={{ backgroundColor: "#faf8ff" }}
         >
           <div className="p-4 sm:p-6 flex flex-col gap-3">
             {/* Top header badge in mobile menu */}
@@ -202,18 +203,18 @@ export default function Header() {
                     className={`flex items-center justify-between p-3 rounded-2xl transition-all ${
                       isActive
                         ? "bg-[#00652c] text-white shadow-md shadow-[#00652c]/20"
-                        : "bg-white/80 hover:bg-[#eaedff] text-[#131b2e] border border-[#dae2fd]/50 active:scale-[0.99]"
+                        : "bg-white hover:bg-[#eaedff] text-[#131b2e] border border-[#dae2fd]/60 active:scale-[0.99] shadow-xs"
                     }`}
                   >
                     <div className="flex items-center gap-3 min-w-0">
                       <div
-                        className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${
+                        className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 overflow-hidden ${
                           isActive
                             ? "bg-white/20 text-white"
                             : "bg-[#eaedff] text-[#00652c]"
                         }`}
                       >
-                        <span className="material-symbols-outlined text-xl">
+                        <span className="material-symbols-outlined text-xl select-none leading-none shrink-0" aria-hidden="true">
                           {link.icon}
                         </span>
                       </div>
