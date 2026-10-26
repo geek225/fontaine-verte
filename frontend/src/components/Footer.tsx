@@ -119,8 +119,8 @@ export default function Footer() {
               </p>
               <p className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-base text-[#79db8d] shrink-0">phone_iphone</span>
-                <a href="tel:+2250140585858" className="hover:text-white transition-colors">
-                  +225 01 40 58 58 58
+                <a href="tel:+2250749928816" className="hover:text-white transition-colors">
+                  +225 07 49 92 88 16
                 </a>
               </p>
               <p className="flex items-center gap-2">

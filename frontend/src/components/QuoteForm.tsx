@@ -99,7 +99,7 @@ export default function QuoteForm({ defaultService }: QuoteFormProps) {
           <h4 className="text-xl font-bold">Demande enregistrée avec succès !</h4>
           <p className="text-sm max-w-md">{status.message}</p>
           <div className="mt-2 text-xs font-semibold text-[#00652c] bg-white/70 px-4 py-2 rounded-xl">
-            Ligne directe urgente : +225 07 57 94 74 40 / +225 01 40 58 58 58
+            Ligne directe urgente : +225 07 57 94 74 40 / +225 07 49 92 88 16
           </div>
           <button
             onClick={() => setStatus({ type: "idle", message: "" })}

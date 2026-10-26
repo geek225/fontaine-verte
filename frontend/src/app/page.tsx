@@ -424,8 +424,7 @@ export default async function HomePage() {
                   <span className="material-symbols-outlined text-xl sm:text-2xl text-[#006399] shrink-0 mt-0.5">call</span>
                   <div>
                     <strong className="text-xs sm:text-sm text-[#131b2e] block">Téléphones directs :</strong>
-                    <span className="text-[11px] sm:text-xs text-[#3f493f] block">+225 07 57 94 74 40 / +225 07 57 17 69 87</span>
-                    <span className="text-[11px] sm:text-xs text-[#3f493f] block">+225 01 40 58 58 58</span>
+                    <span className="text-[11px] sm:text-xs text-[#3f493f] block">+225 07 57 94 74 40 / +225 07 49 92 88 16</span>
                   </div>
                 </div>
 

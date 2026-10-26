@@ -74,11 +74,8 @@ export default async function ContactPage({
                         <a href="tel:+2250757947440" className="block text-[#00652c] font-bold hover:underline">
                           +225 07 57 94 74 40
                         </a>
-                        <a href="tel:+2250757176987" className="block text-[#00652c] font-bold hover:underline">
-                          +225 07 57 17 69 87
-                        </a>
-                        <a href="tel:+2250140585858" className="block text-[#00652c] font-bold hover:underline">
-                          +225 01 40 58 58 58
+                        <a href="tel:+2250749928816" className="block text-[#00652c] font-bold hover:underline">
+                          +225 07 49 92 88 16
                         </a>
                       </p>
                     </div>

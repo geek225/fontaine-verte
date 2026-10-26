@@ -70,7 +70,7 @@ export const FALLBACK_DATA: FontaineVerteData = {
     rccm: "CI-ABJ-2017-B-17438",
     address: "ABIDJAN Yopougon Gnandobité – Bel air du banco, lot 30, îlot 6",
     postal_box: "11 BP 2497 Abidjan 11",
-    phones: ["+225 07 57 94 74 40", "+225 07 57 17 69 87", "+225 01 40 58 58 58"],
+    phones: ["+225 07 57 94 74 40", "+225 07 49 92 88 16"],
     primary_phone: "+225 07 57 94 74 40",
     email: "contact@fontaineverte.ci",
     tagline: "Notre souci, un monde sain !",

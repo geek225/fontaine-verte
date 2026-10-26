@@ -59,8 +59,7 @@ class FV_REST_API {
             'postal_box'    => '11 BP 2497 Abidjan 11',
             'phones'        => [
                 '+225 07 57 94 74 40',
-                '+225 07 57 17 69 87',
-                '+225 01 40 58 58 58',
+                '+225 07 49 92 88 16',
             ],
             'primary_phone' => get_option('fv_company_phone', '+225 07 57 94 74 40'),
             'email'         => get_option('fv_company_email', 'contact@fontaineverte.ci'),
