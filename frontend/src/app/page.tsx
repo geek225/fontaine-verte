@@ -82,20 +82,24 @@ export default async function HomePage() {
               </div>
             </div>
 
-            {/* Right Visual Image */}
+            {/* Right Visual Video */}
             <div className="lg:col-span-5 relative mt-4 lg:mt-0">
-              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border-2 sm:border-4 border-white aspect-4/3 sm:aspect-16/10 lg:aspect-4/5 max-h-120 w-full">
-                <Image
-                  src="/assets/clairiere-boisee.png"
-                  alt="Fontaine Verte environnement assainissement"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-[#131b2e]/90 via-[#131b2e]/20 to-transparent" />
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border-2 sm:border-4 border-white aspect-4/3 sm:aspect-16/10 lg:aspect-4/5 max-h-120 w-full bg-[#131b2e]">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  poster="/assets/clairiere-boisee.png"
+                  className="w-full h-full object-cover"
+                >
+                  <source src="/fontaine-verte.webm" type="video/webm" />
+                  Votre navigateur ne supporte pas la lecture de vidéos HTML5.
+                </video>
+                <div className="absolute inset-0 bg-linear-to-t from-[#131b2e]/90 via-[#131b2e]/20 to-transparent pointer-events-none" />
 
                 {/* Quote Box */}
-                <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-white/95 backdrop-blur-md shadow-md flex items-center justify-between gap-3">
+                <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-white/95 backdrop-blur-md shadow-md flex items-center justify-between gap-3 z-10">
                   <div className="flex flex-col min-w-0">
                     <span className="text-[9px] sm:text-[10px] text-[#00652c] uppercase font-bold tracking-wider">
                       Devise d’entreprise
@@ -111,7 +115,7 @@ export default async function HomePage() {
               </div>
 
               {/* Floating Badge */}
-              <div className="hidden sm:flex absolute -top-3 -left-4 bg-white p-2.5 sm:p-3 rounded-xl sm:rounded-2xl shadow-lg items-center gap-2.5 border border-[#dae2fd]">
+              <div className="hidden sm:flex absolute -top-3 -left-4 bg-white p-2.5 sm:p-3 rounded-xl sm:rounded-2xl shadow-lg items-center gap-2.5 border border-[#dae2fd] z-20">
                 <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-[#95f8a7] text-[#00210a] flex items-center justify-center shrink-0">
                   <span className="material-symbols-outlined text-lg">factory</span>
                 </div>
