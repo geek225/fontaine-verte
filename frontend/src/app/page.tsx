@@ -204,6 +204,94 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* SECTION PARTENAIRES : ILS NOUS FONT CONFIANCE */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-linear-to-b from-white via-[#f6f8ff] to-[#faf8ff] border-t border-[#dae2fd]/60 overflow-hidden relative">
+        {/* Lueur d'ambiance verte en arrière-plan */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#95f8a7]/15 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* En-tête */}
+          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#95f8a7]/30 border border-[#15803d]/20 text-[#00652c] mb-3">
+              <span className="material-symbols-outlined text-sm sm:text-base">handshake</span>
+              <span className="text-[11px] sm:text-xs tracking-wider uppercase font-extrabold">
+                Partenariats & Références
+              </span>
+            </div>
+
+            <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-extrabold text-[#131b2e] tracking-tight">
+              Ils nous font confiance
+            </h2>
+
+            <p className="text-xs sm:text-sm text-[#3f493f] mt-2 sm:mt-2.5 max-w-xl mx-auto leading-relaxed">
+              Grandes entreprises industrielles, acteurs majeurs de l'énergie et institutions de référence font confiance à Fontaine Verte pour la gestion responsable de leurs déchets.
+            </p>
+          </div>
+        </div>
+
+        {/* Carrousel animé de cartes partenaires */}
+        <div className="relative w-full overflow-hidden py-2">
+          {/* Dégradés latéraux pour transition douce */}
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-12 sm:w-24 md:w-36 bg-linear-to-r from-white via-white/80 to-transparent z-10" />
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 sm:w-24 md:w-36 bg-linear-to-l from-white via-white/80 to-transparent z-10" />
+
+          {/* Piste de défilement infini */}
+          <div className="flex animate-partner-marquee gap-4 sm:gap-6 items-center">
+            {[...data.partners, ...data.partners, ...data.partners].map((partner, idx) => (
+              <div
+                key={`${partner.id}-${idx}`}
+                className="w-56 sm:w-64 md:w-72 shrink-0 bg-white rounded-2xl p-4 sm:p-5 border border-[#dae2fd] shadow-xs hover:shadow-xl hover:border-[#15803d]/40 hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center justify-between group cursor-default"
+              >
+                {/* Zone image / logo */}
+                <div className="relative w-full h-20 sm:h-24 flex items-center justify-center p-2 rounded-xl bg-white transition-transform duration-300 group-hover:scale-105">
+                  <Image
+                    src={partner.image}
+                    alt={partner.name}
+                    width={220}
+                    height={90}
+                    className="max-h-14 sm:max-h-16 w-auto object-contain"
+                  />
+                </div>
+
+                {/* Métadonnées du partenaire */}
+                <div className="w-full pt-3 mt-1 border-t border-[#dae2fd]/50 flex flex-col items-center text-center">
+                  <span className="text-xs sm:text-[13px] font-bold text-[#131b2e] group-hover:text-[#00652c] transition-colors truncate max-w-full">
+                    {partner.name}
+                  </span>
+                  {partner.category && (
+                    <span className="text-[10px] sm:text-[11px] text-[#3f493f] truncate max-w-full font-medium">
+                      {partner.category}
+                    </span>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Badges de réassurance sous les cartes */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 sm:mt-10 relative z-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto">
+            <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white/90 backdrop-blur-xs border border-[#dae2fd] shadow-2xs">
+              <span className="material-symbols-outlined text-[#00652c] text-xl">verified_user</span>
+              <span className="text-[11px] sm:text-xs font-bold text-[#131b2e]">Conformité CIAPOL</span>
+            </div>
+            <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white/90 backdrop-blur-xs border border-[#dae2fd] shadow-2xs">
+              <span className="material-symbols-outlined text-[#006399] text-xl">history_edu</span>
+              <span className="text-[11px] sm:text-xs font-bold text-[#131b2e]">Certificats officiels</span>
+            </div>
+            <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white/90 backdrop-blur-xs border border-[#dae2fd] shadow-2xs">
+              <span className="material-symbols-outlined text-[#15803d] text-xl">speed</span>
+              <span className="text-[11px] sm:text-xs font-bold text-[#131b2e]">Intervention 24/48h</span>
+            </div>
+            <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white/90 backdrop-blur-xs border border-[#dae2fd] shadow-2xs">
+              <span className="material-symbols-outlined text-[#00652b] text-xl">eco</span>
+              <span className="text-[11px] sm:text-xs font-bold text-[#131b2e]">Filière éco-responsable</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 3. NOS PÔLES DE SERVICES */}
       <section className="py-12 sm:py-16 lg:py-20 bg-[#faf8ff] border-t border-[#dae2fd]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -83,3 +83,36 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Animation Marquee Partenaires */
+@keyframes partnerMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-partner-marquee {
+  display: flex;
+  width: max-content;
+  animation: partnerMarquee 32s linear infinite;
+  will-change: transform;
+}
+
+.animate-partner-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (max-width: 640px) {
+  .animate-partner-marquee {
+    animation-duration: 22s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-partner-marquee {
+    animation: none;
+  }
+}
+

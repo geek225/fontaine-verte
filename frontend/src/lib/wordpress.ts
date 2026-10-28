@@ -54,11 +54,20 @@ export interface CertificationItem {
   image: string | null;
 }
 
+export interface PartnerItem {
+  id: number;
+  name: string;
+  image: string;
+  category?: string;
+  description?: string;
+}
+
 export interface FontaineVerteData {
   company: CompanyInfo;
   services: ServiceItem[];
   equipments: EquipmentItem[];
   certifications: CertificationItem[];
+  partners: PartnerItem[];
 }
 
 // Données statiques officielles issues du Dossier de Présentation PDF (Fallback haute disponibilité)
@@ -183,6 +192,57 @@ export const FALLBACK_DATA: FontaineVerteData = {
       image: "/assets/clairiere-boisee.png",
     },
   ],
+  partners: [
+    {
+      id: 1,
+      name: "Cabinet Hermann Reyes",
+      image: "/partenaires/img171.jpg",
+      category: "Conseil Juridique & Fiscal",
+      description: "Cabinet d'avocats à la cour",
+    },
+    {
+      id: 2,
+      name: "HYGI'NET",
+      image: "/partenaires/img172.jpg",
+      category: "Hygiène & Entretien",
+      description: "Le professionnalisme de l'entretien et de l'hygiène",
+    },
+    {
+      id: 3,
+      name: "Société de Grand-Bassam",
+      image: "/partenaires/img174.jpg",
+      category: "Services & Logistique",
+      description: "Partenaire industriel et logistique",
+    },
+    {
+      id: 4,
+      name: "ISHOPGAZ",
+      image: "/partenaires/img175.jpg",
+      category: "Énergie & Distribution Gaz",
+      description: "Réseau de distribution de gaz et d'énergie",
+    },
+    {
+      id: 5,
+      name: "Ivory Cocoa Products",
+      image: "/partenaires/img176.jpg",
+      category: "Agro-industrie Cacao",
+      description: "Transformation et valorisation du cacao ivoirien",
+    },
+    {
+      id: 6,
+      name: "SICABLE",
+      image: "/partenaires/img177.jpg",
+      category: "Industrie & Câblerie",
+      description: "Société Ivoirienne de Câbles",
+    },
+    {
+      id: 7,
+      name: "VINCI Energies",
+      image: "/partenaires/img178.jpg",
+      category: "Énergie & Infrastructures",
+      description: "Acteur mondial des énergies et technologies",
+    },
+  ],
 };
 
 const WORDPRESS_API_URL = process.env.NEXT_PUBLIC_WORDPRESS_API_URL || "http://fontaine-verte.local";
@@ -210,6 +270,7 @@ export async function getFontaineVerteData(): Promise<FontaineVerteData> {
         services: data.services,
         equipments: data.equipments && data.equipments.length > 0 ? data.equipments : FALLBACK_DATA.equipments,
         certifications: data.certifications && data.certifications.length > 0 ? data.certifications : FALLBACK_DATA.certifications,
+        partners: data.partners && data.partners.length > 0 ? data.partners : FALLBACK_DATA.partners,
       };
     }
   } catch (err) {
