@@ -230,10 +230,10 @@ export const FALLBACK_DATA: FontaineVerteData = {
     },
     {
       id: 6,
-      name: "SICABLE",
+      name: "LRA",
       image: "/partenaires/img177.jpg",
-      category: "Industrie & Câblerie",
-      description: "Société Ivoirienne de Câbles",
+      category: "BTP",
+      description: "La Route Africaine - BTP",
     },
     {
       id: 7,
